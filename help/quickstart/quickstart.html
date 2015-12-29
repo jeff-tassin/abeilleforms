@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h3>Quick Start</h3>
+<p>Abeille Forms Designer is a tool for quickly designing
+cross-platform graphical user interfaces. Abeille is a Swing based
+application and uses Swing components.</p>
+<p>Abeille depends on the JGoodies FormLayout Manager (Abeille includes
+all the software you need). Users can create forms by dragging Swing
+components from a pallette to a cell on the currently active form. Once
+GUI is completed, the design information is saved to a file. Abeille is
+not a code generator. A forms runtime (formsrt.jar) is used to load and
+display the form in your application.</p>
+<p> To start Abeille, type the following in a console window:<br>
+</p>
+<pre>     java -jar designer.jar </pre>
+<br>
+<h4>Example Forms</h4>
+<p>The Forms Designer has several sample forms that demonstrate the
+powerful capabilities of the builder. These forms are located in the
+examples directory. To correctly view these forms, follow the
+instructions in the README.txt file in the examples directory.</p>
+<br>
+<h4>Creating a New Project</h4>
+<p>Create a new project by selecting New Project from the File menu.</p>
+<p align="center"><img src="new_project.png" border="0" ></p>
+<p>The Project File field allows you to specify where to store this
+project information. Provide a path and filename where your project
+file can be stored.</p>
+
+<p>Abeille allows you to use images as well as include nested forms
+within other forms. To do this, images and nested forms must be loaded
+from the CLASSPATH during runtime. Therefore, you must provide the root
+paths to your image and form resources. This is basically the path to
+the topmost package where your image resources will be located in the
+CLASSPATH. The same applies to your forms. It is recommended that you
+store your forms in the same location as your Java source files.
+Therefore, you should include the path(s) to your Java source files in
+addition to your image files.</p>
+<br>
+<h4>Project Team Settings</h4>
+<p>After designating a project file it may also be declared for shared usage across a project 
+team.  The .jfpr project file may then be checked into SVN, CVS, or another 
+version control system and checked out and shared by all members of the team.  
+Check the corresponding checkbox to indicate that the project file is to be used in 
+a team setting.  When checked the "Project Root" drop down will become 
+enabled along with the "Project Level Java Beans" tab.</p>
+
+<p>When enabled the "Project Root" drop down will be populate with environment variables 
+available on the operating system that Abeille is running on.  In planning and preparing for 
+setting up a shared project it should be determined in advance what the common environment 
+variable should be named.  Each workstation should then be configured to have this common 
+environment variable set to the root project directory for each workstation used on the project.  
+In a team setting Abeille <b>requires</b> that this variable be specified and for each workstation 
+all source paths, class paths, java bean paths, etc. will be designated as relative to the project 
+root specified by this variable.</p>
+
+<p>For shared project files additional java beans may be specified at the project level.  
+These beans will only be available when the shared project is opened in Abeille and 
+will appear on the java beans palette.  Likewise when a project is closed all project level 
+beans will be removed from the beans palette.</p>
+
+<p align="center"><img src="new_project_beans.png" border="0" ></p>
+<br>
+<br>
+<h4>Creating Your First Form</h4>
+<p>For this first example, we will use unnamed packages. We will also
+assume that our development directory is c:\myforms. In this directory
+we will put our Java source, images, and form files. Create a new
+project in c:\myforms and add c:\myforms to the Paths list in the
+Project settings dialog.</p>
+<p>Once your project is created, press the Create Form button on the
+toolbar. This should create an empty form as follows:</p>
+<p align="center"><img src="../images/new_form.png" border="0"
+ height="395" width="600"></p>
+<p><br>
+</p>
+<p>For this example, we would like to create a simple data entry form:</p>
+<p align="center"><img src="example1.png" border="0" height="195"
+ width="380"></p>
+<p>The first step is to add the labels. Select the JLabel tool from the
+palette. Next, click on a cell in the current form. The exact location
+of the cell is not critical at this point. Simply choose a cell that is
+approximately where you think the label should appear on the form.
+(note that it is very easy to polish the form once you have decided on
+a design). </p>
+<p>Repeat this procedure three times so that we have four labels on the
+form. Make sure to include an empty row beneath each lable. This will
+prevent the componets from being to close to one another on the form. </p>
+<p align="center"><img src="example1a.png" border="0" height="382"
+ width="600"></p>
+<p>Now, click on each label on the form so that its properties can be
+accessed in the property editor to the right of the form. Scroll down
+and select the Text property. Enter the appropriate text for each label
+on the form.</p>
+<p>Keep in mind that most layout managers in Java don't require you to
+manually set the sizes for components - that's that layout manager's
+job. The FormLayout manager (which Abeille is based) is no different.
+Components are arranged and sized based on the row, column, and cell
+constraints of the form and not by manually setting the component
+dimensions. This approach is much more powerful than doing it manually.
+This will become evident when we want to constrain components to
+automatically resize when the form is resized.</p>
+<p>Next, add the JTextField components to the form. Click on the
+JTextField button on the tool palette and then click on the cell where
+the text field should go. You should leave a column between the text
+field and its label. This will provide a small amount of space to
+separate the lable and the field. At this point your form should appear
+as follows:</p>
+<p align="center"><img src="example1b.png" border="0" height="337"
+ width="365"></p>
+<p align="left">By looking at the form, it is obvious that the text
+fields are not wide enough. When a form is first created, all cells are
+set to automatically size themselves based on the preferred size of the
+component. All cells in a row must have the same height. Likewise, all
+cells in a column must have the same width. Now, an empty text field
+has a small preferred width (that's because there is no text). However,
+the preferred height of the field is dependent on the default font of
+the field. That is why the text fields have a reasonable height but
+their width is too short. </p>
+<p align="left">We would like to constrain the First Name, Last Name,
+Address and City text fields to fill up any available space in the
+horizontal direction. To accomplish this, we must change the Column
+Specification for the column that contains our text fields.</p>
+<p align="left">Select the Column Spec editor on the right side of the
+builder. The options in this editor are described in the FormLayout
+whitepaper which is included in this documentation.</p>
+<p align="left">In the Column Spec, select the Grow radio button. This
+will constrain the column to increase/descrease its size such that it
+takes up 100% of the available space (in the horizontal direction) on
+the form. Now, select the state text field. Instead of growing, we want
+this component to have a fixed width. In the Column Size pane select
+the Constant radio button. Set the Constant size to 20 DLU. </p>
+<p align="left">The following figure shows the control panels for
+changing the row and column specifiations for the currently selected
+form. See the included FormLayout whitepaper for a full description of
+row and column specifications.</p>
+<table border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="center">
+      <table border="0">
+        <tbody>
+          <tr>
+            <td><img src="../images/col_spec.png" border="0"
+ height="400" width="171"></td>
+            <td><img src="../images/row_spec.png" border="0"
+ height="400" width="171"></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p align="left">Now the form is beginning to take shape. The designer
+window is very close to WYSIWYG. However, to see the true rendering of
+the form, you should click the Show Form button on the toolbar. Notice
+that the vertical spacing between each label and text field is a little
+too large. To fix this, first close the preview window. Next, click on
+one of the empty rows between the labels. Click the Set As Row
+Separator button on the toolbar. This should change the row height to a
+reasonable setting. Repeat this procedure for every empty row between
+the labels on the form. You can also remove any empty rows and columns
+that surround the components by clicking the appropriate buttons on the
+toolbar.<br>
+</p>
+<h4 align="left">Naming Components</h4>
+<p>Components on your form are accessed in Java using their names. It
+is important to provide unique names for each component that you wish
+to access in code. To assign a name, simply click the component and
+type the name in the Properties Panel. Components can then be accessed
+in your code as follows:<br>
+</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>
+      <pre>     FormPanel panel = new FormPanel( "myform.jfrm" );<br>     JTextField fname = (JTextField)panel.getComponentByName( "first.name" );       <br>     JTextField lname = (JTextField)panel.getComponentByName( "last.name" );<br><br>     // FormPanel also has methods for most of the basic Swing components.<br>     // This eliminates having to cast to the appropriate type.<br>     JTextField address = panel.getTextField( "address" );<br>     JTextField city = panel.getTextField( "city" );</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p align="left">Now your form is complete. You should save it to the
+source directory, c:\myforms. The next step is to write a Java program
+that reads the form and displays it.</p>
+<br>
+<h4 align="left">Integrating Abeille Forms into your Java code.</h4>
+<p align="left">Working with Abeille Forms in Java is easy. Simply
+instantiate a com.jeta.forms.components.panel.FormPanel object and pass
+the name of the form file as an argument to the constructor. Then add
+the FormPanel object to a Swing container in your application.
+FormPanel is a type of JPanel so it can be easily integrated into
+another Swing container such as a JDialog.</p>
+<p align="left">For our example we created a form file called
+myform.jfrm. For this example we are also using unnamed packages;
+therefore, our FormPanel declaration would appear as follows:</p>
+<pre>    FormPanel panel = new FormPanel( "myform.jfrm" );</pre>
+<p>Simple example application:</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>
+      <pre>import java.awt.*;<br>import java.awt.event.*;<br>import javax.swing.*;<br><br>import com.jeta.forms.components.panel.FormPanel;<br><br>/**<br> * Example frame window that loads a form and displays it.<br> */<br>public class MyFormFrame extends JFrame<br>{<br>   /**<br>    * Constructor<br>    */<br>   public MyFormFrame( )<br>   {<br>      /**<br>       * FormPanel is a type of JPanel used to contain a form.<br>       * In this case it is loading the form file myform.jfrm which<br>       * was created with the Abeille Forms Designer.<br>       */<br>      FormPanel panel = new FormPanel( "myform.jfrm" );<br>      getContentPane().add( panel );<br><br>      // set the size and location of this frame<br>      setSize( 600, 500 );<br>      setLocation( 200, 100 );<br>      setVisible( true );<br>   }<br><br>   /**<br>    * The main entry point for the application<br>    * @param args an array of command line arguments for the application.               <br>    */<br>   public static void main( String[] args )<br>   {<br>      MyFormFrame frame = new MyFormFrame( );<br>      frame.addWindowListener( new WindowAdapter()<br>	 {<br>	    public void windowClosing( WindowEvent evt )<br>	    {<br>	       System.exit(0);<br>	    }<br>	 });<br>   }<br>}<br></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p>Keep in mind that if you are using named packages, you must include
+the package name as well as the form file when creating FormPanel
+instances. All forms are loaded from the classpath during runtime. If
+the above example were stored in the package com.abc.myapp, the code
+would appear as follows:</p>
+<pre>    FormPanel panel = new FormPanel( "com/abc/myapp/myform.jfrm" );</pre>
+<br>
+<br>
+<h4 align="left">Building your application</h4>
+<p align="left">To build and run your application, simply include the
+JAR file <b>formsrt.jar</b> in your classpath. This file can be found
+in your Abeille Forms installation directory.</p>
+<br>
+<br>
+</body>
+</html>

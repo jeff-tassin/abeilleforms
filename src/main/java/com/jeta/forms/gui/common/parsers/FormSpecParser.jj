@@ -1,0 +1,199 @@
+/*
+ * Copyright (c) 2004 JETA Software, Inc.  All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ *
+ *  o Redistributions of source code must retain the above copyright notice, 
+ *    this list of conditions and the following disclaimer.
+ *
+ *  o Redistributions in binary form must reproduce the above copyright notice, 
+ *    this list of conditions and the following disclaimer in the documentation 
+ *    and/or other materials provided with the distribution.
+ *
+ *  o Neither the name of JETA Software nor the names of its contributors may 
+ *    be used to endorse or promote products derived from this software without 
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+ * INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+ * INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+
+/**
+ * JAVACC Token definitions for parsing FormSpec encoded strings
+ *
+ * @author Jeff Tassin
+ *
+ */
+
+options
+{
+    LOOKAHEAD=1;
+    FORCE_LA_CHECK=true;
+    STATIC=false;
+    IGNORE_CASE = true;
+}
+
+PARSER_BEGIN(FormSpecParser)
+
+package com.jeta.forms.gui.common.parsers;
+
+
+public class FormSpecParser
+{
+   public String m_alignment;
+   public String m_size_type;
+   public String m_constant_size = "10.0";
+   public String m_constant_units = "PX";
+   public String m_component_size;
+   public String m_bounded_size;
+   public String m_resize;
+   public String m_resize_weight = "1.0";
+
+}
+
+PARSER_END(FormSpecParser)
+
+SKIP:
+{
+    " "
+  | "\r"
+  | "\t"
+}
+
+
+TOKEN :
+{
+ < EOL: "\n" >
+}
+
+
+
+TOKEN:  /* Literals */
+{
+    < INTEGER_LITERAL: (["0"-"9"])+ >
+  | < FLOATING_POINT_LITERAL:
+          (["0"-"9"])+ "." (["0"-"9"])+ (<EXPONENT>)?
+        | "." (["0"-"9"])+ (<EXPONENT>)?
+        | (["0"-"9"])+ <EXPONENT>
+        | (["0"-"9"])+ (<EXPONENT>)?
+    >
+  | < #EXPONENT: ["e","E"] (["+","-"])? (["0"-"9"])+ >
+  | < STRING_LITERAL: "'" (~["'"])* ( "''" (~["'"])* )* "'" >
+}
+
+
+TOKEN:  /* Identifiers */
+{
+    < #LETTER: ["A"-"Z", "a"-"z"] >
+  | < #DIGIT: ["0"-"9"] >
+}
+
+
+TOKEN:  /* Separators and operators */
+{
+    < SEMICOLON: ";" >
+ |  < COLON: ":" >
+}
+
+/**
+* Invoke parse to start the parse operation
+*/
+void parse():
+{  Token x = null; }
+{
+   alignment()
+   <COLON>
+   size()
+   <COLON>
+   resize()
+}	
+
+void alignment() :
+{  Token x = null; }
+{
+
+   ( "L" | "LEFT" ){ m_alignment = "LEFT"; }
+ | ( "C" | "CENTER" ) { m_alignment = "CENTER"; }
+ | ( "R" | "RIGHT" ) { m_alignment = "RIGHT"; }
+ | ( "F" | "FILL" ) { m_alignment = "FILL"; }
+ | ( "T" | "TOP" ) { m_alignment = "TOP"; }
+ | ( "B" | "BOTTOM" ) { m_alignment = "BOTTOM"; }
+}
+
+
+String units() :
+{  Token x = null; }
+{
+   "PX" { return "PX"; }
+ | "PT" { return "PT"; }
+ | "DLU" { return "DLU"; }
+ | "DLUX" { return "DLU"; }
+ | "DLUY" { return "DLU"; }
+ | "IN" { return "IN"; }
+ | "MM" { return "MM"; }
+ | "CM" { return "CM"; }
+}
+
+void size() :
+{  Token x = null; }
+{
+   constantSize() {  m_size_type = "CONSTANT"; }
+ | componentSize() { m_size_type = "COMPONENT"; }
+ | boundedSize() { m_size_type = "BOUNDED"; }
+}
+
+
+
+void constantSize( ) :
+{  Token x = null; String size = ""; String units = "";}
+{
+
+  (   x = <INTEGER_LITERAL> 
+    | x = <FLOATING_POINT_LITERAL> )
+     {
+	size = x.image;
+     }
+   units = units()
+    {
+	m_constant_size = size;
+	m_constant_units = units;
+    }
+}   
+
+void componentSize() :
+{   Token x = null; }
+{
+   ( "M" | "MIN" ) { m_component_size = "MIN"; }
+ | ( "P" | "PREF" ) { m_component_size = "PREF"; }
+ | ( "D" | "DEFAULT" ) { m_component_size = "DEFAULT"; }
+}
+
+void boundedSize() :
+{  Token x = null; }
+{
+   ( "MIN(" { m_bounded_size = "MIN"; } | "MAX(" { m_bounded_size = "MAX"; } )
+   ( 
+        ( constantSize() <SEMICOLON> componentSize() )
+      | ( componentSize() <SEMICOLON> constantSize() ) 
+   )
+   ")"
+}   
+ 
+
+void resize() :
+{  Token x = null; }
+{
+   ( "NOGROW" | "N" ) { m_resize = "NONE"; }
+  | ("GROW" | "G") { m_resize = "GROW"; }
+     ("(" x=<FLOATING_POINT_LITERAL> {  m_resize_weight = x.image; } ")" )*
+}

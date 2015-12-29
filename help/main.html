@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD> 
+	 <TITLE></TITLE> 
+  </HEAD> 
+  <BODY> 
+	 <H3><IMG SRC="images/abeilleforms.gif">Abeille Forms Designer </H3> 
+        <P>Copyright &copy; 2004 JETA Software, Inc. All rights reserved.
+				<A HREF="http://www.jetaware.com">http://www.jetaware.com</A></P> 
+     <P><A HREF="#install">Installation</A></P>
+     <P><A HREF="quickstart/quickstart.html">Quick Start</A></P>
+     <P><A HREF="designer/designer.html">Designer</A></P>
+     <P><A HREF="designer/lookandfeel.html">Look And Feel</A></P>
+     <P><A HREF="usage/development.html">Development</A></P>
+     <P><A HREF="codegen/codegen.html">Code Generation</A></P>
+      <P><A HREF="api/overview-summary.html">API</A></P>
+     <P><A HREF="license.html">License</A></P>
+	 <P>Abeille Forms Designer is a tool for quickly designing cross-platform
+		graphical user interfaces. Forms Designer is a Swing based application and uses Swing
+		components.</P> 
+	 <P>Forms Designer depends on the JGoodies FormLayout Manager (Forms Designer includes all
+		the software you need). The FormLayout is a powerful, open source layout
+		manager which you can use to programmatically create layouts in Java. Abeille
+		works on top of the FormLayout and allows you to build forms visually using
+		drag and drop. Abeille also includes support for images and painting effects
+		such as gradients, textures, and dynamic colors (based on current look and
+		feel).</P> 
+	 <P>The FormLayout project is located at
+		<A HREF="https://forms.dev.java.net">https://forms.dev.java.net</A>. However,
+		Abeille includes all the files you need. To understand this layout manager, it
+		is important to read the FormLayout whitepaper included with this documentation
+		<FONT SIZE="-1">(included with permission from Karsten
+		Lentzsch)</FONT>.</P> 
+	 <P>The FormLayout is a grid based layout manager. Forms can be created by
+		defining a grid and adding Swing components to cells on the grid. Each cell,
+		row, and column can be constrained to a specified size and resize behavior. In
+		Abeille users can create forms by dragging Swing components from a pallette to
+		a cell on the currently active form. Once GUI is completed, the design
+		information is saved to a file. Abeille is not a code generator. Rather	
+  	    developers create form files using the designer and reference these files in
+		their own applications to display the forms. The forms runtime is open sourced under
+        the BSD license and may be freely distributed.
+</P>
+     <H4><A NAME="install">Installation</A></H4>
+	 <P>Forms Designer requires <B>Java 1.4</B> or higher. The current download does
+		not include the Java runtime, so you must install Java yourself if you
+		currently don't have it. You can download Java from:
+		<A HREF="http://www.java.com">http://www.java.com</A></P> 
+	 <P>Abeille Forms are pacakged in a ZIP file (abeilleforms.zip). This file
+		contains the following:</P>
+	 <TABLE BORDER="0" CELLSPACING="2" WIDTH="655"> 
+		<TR> 
+		  <TD WIDTH="121"><B>designer.jar</B></TD> 
+		  <TD WIDTH="533">The main JAR file for the application.</TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="121"><B>formsrt.jar</B></TD> 
+		  <TD WIDTH="533">The forms runtime. You distribute this JAR with your
+			 application. This is the only file you may distribute.</TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="121"><B>README.txt</B></TD> 
+		  <TD WIDTH="533">The README file for Abeille Forms. </TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="121"><B>documentation/</B></TD> 
+		  <TD WIDTH="533">The documentation directory.</TD> 
+		</TR> 
+	 </TABLE><BR> 
+	  <P>You can now start Abeille Forms. Simply type:<BR></P> 
+	  <PRE>     <B>java -jar designer.jar</B></PRE> 
+	 <P><I>You can also double-click designer.jar if your OS supports running
+		executable JAR files this way.</I></P> </BODY>
+</HTML>

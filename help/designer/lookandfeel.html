@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<p></p>
+<h3>Look And Feel</h3>
+<p> Abeille Forms Designer has support for multiple look and feels. It
+supports operating system specific look and feels such as Windows and
+Mac OS X. Additionally, Abeille provides the JGoodies Look And Feel. <br>
+</p>
+<p>Also keep in mind that Abeille does not store any look and feel
+information in the forms themselves. When you load a form in your own
+application, the form will assume the current look and feel of your
+application. It is up to the application to set the look and feel. It
+is trivial to set the look and feel during application startup. For
+example, to set your look and feel to Windows (this only works on
+Windows operating systems), make the following call before showing any
+windows:</p>
+<br>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>
+      <pre>   try <br>   {<br>      UIManager.setLookAndFeel( "com.sun.java.swing.plaf.windows.WindowsLookAndFeel" );  <br>   } <br>   catch (Exception e) <br>   { }<br></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h4>Registering New Look and Feels</h4>
+<p align="left">You can register new look and feels for the designer by
+editing (or creating) the <font face="Courier">swing.properties</font>
+file. This file is located in the <font face="Courier">lib</font>
+directory of the Java release. The following <font face="Courier">swing.properties</font>
+file registers two new look and feels (Abeille will automatically
+include these when restarted):</p>
+<br>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>
+      <pre>swing.installedlafs = liquid,kunststoff<br>swing.installedlaf.liquid.name = Liquid<br>swing.installedlaf.liquid.class = com.birosoft.liquid.LiquidLookAndFeel      <br>swing.installedlaf.kunststoff.name = Kunststoff<br>swing.installedlaf.kunststoff.class = com.incors.plaf.kunststoff.KunststoffLookAndFeel   <br></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p align="left"><b><i>Any installed look and feels must be included in
+the classpath of Abeille.
+</i></b></p>
+<p align="left">You can get more information on working with look and
+feels from the Java tutorial</p>
+<p align="left"><a
+ href="http://java.sun.com/docs/books/tutorial/uiswing/misc/plaf.html">http://java.sun.com/docs/books/tutorial/uiswing/misc/plaf.html</a></p>
+<p align="left"></p>
+<p align="left"></p>
+</body>
+</html>

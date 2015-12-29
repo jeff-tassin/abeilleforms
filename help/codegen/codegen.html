@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD> 
+	 <TITLE></TITLE> 
+  </HEAD> 
+  <BODY> 
+	 <H3>Code Generation</H3> 
+	 <P>The Forms Designer can generate Java source code from a form. However,
+		this is a forward-only operation. Java source cannot be reverse engineered back
+		to a form. The feature is provided so you can completely decouple your code
+		from the forms runtime library.</P>
+	 <P>Since the forms runtime is open source under the BSD license, the only
+		reason to use code generation is to remove any dependencies from the forms
+		runtime. However, the forms runtime has capabilities that are not directly
+		available in the JDK. Since generated code will not include any forms runtime
+		dependencies, the resulting GUI will only contain a subset of what might be
+		available in the designer. Specifically, code generation does not include the
+		following:</P>
+	 <UL>
+		<LI>Fill effects such as gradients and textures.</LI>
+		<LI>Horizontal or vertical line components.</LI>
+		<LI>Some line borders.</LI>
+		<LI>JList items</LI>
+		<LI>JComboBox item icons.</LI>
+		<LI>ImageComponents. If you want to use images, you must define them in a
+		  JLabel or JButton.</LI>
+	 </UL> 
+	 <P>The generated code does depend on the FormLayout library. You can
+		download this library from:<A
+		HREF="https://forms.dev.java.net">https://forms.dev.java.net</A></P>
+	 <P></P>
+	 <P>To generate the Java code for a form, simply select the <B>Code
+		Generation</B> item in the <B>Tools</B> menu. This will show a dialog with the
+		generated code. You can press the Options button to change some of the
+		formatting and generation rules.</P>
+	 <P></P> <BR><BR> </BODY>
+</HTML>

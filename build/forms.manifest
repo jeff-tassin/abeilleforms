@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: com.jeta.swingbuilder.main.Launcher
+Class-Path: formsrt.jar dt.jar formshelp.jar jh.jar looks-1.3.1.jar substance.jar
+
+
+

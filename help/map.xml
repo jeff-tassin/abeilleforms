@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+                     "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+	<mapID target="abeilleforms.help" url="main.html"/>
+	<mapID target="designer" url="designer/designer.html"/>
+	<mapID target="quickstart" url="quickstart/quickstart.html"/>
+	<mapID target="development" url="usage/development.html"/>
+	<mapID target="index" url="api/index.html"/>
+	<mapID target="overview" url="api/overview-summary.html"/>
+	<mapID target="license" url="license.html"/>
+	<mapID target="abeilleforms" url="images/abeilleforms.gif"/>
+	<mapID target="lookandfeel" url="designer/lookandfeel.html"/>
+	<mapID target="shortcuts" url="shortcuts.html"/>
+	<mapID target="nested_forms" url="images/nested_forms.png"/>
+	<mapID target="FormAccessor" url="api/com/jeta/forms/gui/form/class-use/FormAccessor.html"/>
+	<mapID target="package-use" url="api/com/jeta/forms/gui/form/package-use.html"/>
+	<mapID target="package-frame" url="api/com/jeta/forms/gui/form/package-frame.html"/>
+	<mapID target="package-summary" url="api/com/jeta/forms/gui/form/package-summary.html"/>
+	<mapID target="package-tree" url="api/com/jeta/forms/gui/form/package-tree.html"/>
+	<mapID target="FormAccessor1" url="api/com/jeta/forms/gui/form/FormAccessor.html"/>
+	<mapID target="FormPanel" url="api/com/jeta/forms/components/panel/FormPanel.html"/>
+	<mapID target="SwingComponentSupport" url="api/com/jeta/open/support/SwingComponentSupport.html"/>
+	<mapID target="codegen" url="codegen/codegen.html"/>
+	<mapID target="column_insert" url="images/app/column_insert.png"/>
+	<mapID target="row_sep_large" url="images/app/row_sep_large.png"/>
+	<mapID target="row_grow" url="images/app/row_grow.png"/>
+	<mapID target="undo" url="images/app/undo.png"/>
+	<mapID target="cut" url="images/app/cut.png"/>
+	<mapID target="row_decrease_span" url="images/app/row_decrease_span.png"/>
+	<mapID target="save" url="images/app/save.png"/>
+	<mapID target="paste" url="images/app/paste.png"/>
+	<mapID target="column_grow" url="images/app/column_grow.png"/>
+	<mapID target="column_decrease_span" url="images/app/column_decrease_span.png"/>
+	<mapID target="column_delete" url="images/app/column_delete.png"/>
+	<mapID target="column_sep_small" url="images/app/column_sep_small.png"/>
+	<mapID target="column_nogrow" url="images/app/column_nogrow.png"/>
+	<mapID target="row_increase_span" url="images/app/row_increase_span.png"/>
+	<mapID target="copy" url="images/app/copy.png"/>
+	<mapID target="row_insert" url="images/app/row_insert.png"/>
+	<mapID target="column_sep_large" url="images/app/column_sep_large.png"/>
+	<mapID target="add" url="images/app/add.png"/>
+	<mapID target="column_increase_span" url="images/app/column_increase_span.png"/>
+	<mapID target="open" url="images/app/open.png"/>
+	<mapID target="play" url="images/app/play.png"/>
+	<mapID target="row_sep_small" url="images/app/row_sep_small.png"/>
+	<mapID target="open_project" url="images/app/open_project.png"/>
+	<mapID target="row_delete" url="images/app/row_delete.png"/>
+	<mapID target="redo" url="images/app/redo.png"/>
+	<mapID target="row_nogrow" url="images/app/row_nogrow.png"/>
+	<mapID target="new_project" url="images/app/new_project.png"/>
+	<mapID target="FormConverter" url="api/com/jeta/swingbuilder/gui/utils/class-use/FormConverter.html"/>
+	<mapID target="package-use1" url="api/com/jeta/swingbuilder/gui/utils/package-use.html"/>
+	<mapID target="package-frame1" url="api/com/jeta/swingbuilder/gui/utils/package-frame.html"/>
+	<mapID target="package-summary1" url="api/com/jeta/swingbuilder/gui/utils/package-summary.html"/>
+	<mapID target="package-tree1" url="api/com/jeta/swingbuilder/gui/utils/package-tree.html"/>
+	<mapID target="FormConverter1" url="api/com/jeta/swingbuilder/gui/utils/FormConverter.html"/>
+</map>
