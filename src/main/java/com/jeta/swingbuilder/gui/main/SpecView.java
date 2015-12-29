@@ -18,6 +18,7 @@
 
 package com.jeta.swingbuilder.gui.main;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 import javax.swing.JSpinner;
@@ -69,13 +70,15 @@ public class SpecView extends JETAPanel implements GridViewListener, FormSpecDef
 		m_rowview = rowView;
 
 		m_editor_mgr = (EditorManager) JETARegistry.lookup(EditorManager.COMPONENT_ID);
-		FormLayout layout = new FormLayout("fill:pref:grow", "pref");
-		CellConstraints cc = new CellConstraints();
+		//FormLayout layout = new FormLayout("fill:pref:grow", "pref");
+		//CellConstraints cc = new CellConstraints();
 
-		setLayout(layout);
+		//setLayout(layout);
+		setLayout( new BorderLayout() );
 
 		m_spec_panel = new FormPanel(formPath);
-		add(m_spec_panel, cc.xy(1, 1));
+		//add(m_spec_panel, cc.xy(1, 1));
+		add( m_spec_panel, BorderLayout.CENTER );
 
 		String def = m_spec_panel.getText(SpecViewNames.ID_CONST_SIZE_AMT_FIELD);
 		m_spec_panel.getTextField(SpecViewNames.ID_CONST_SIZE_AMT_FIELD).setDocument(new FloatDocument(false));

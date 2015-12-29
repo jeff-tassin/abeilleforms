@@ -26,6 +26,7 @@ import javax.swing.JLabel;
 import com.jeta.forms.components.panel.FormPanel;
 import com.jeta.forms.gui.effects.ImagePainter;
 import com.jeta.forms.gui.form.GridView;
+import com.jeta.forms.logger.FormsLogger;
 import com.jeta.forms.store.properties.ImageProperty;
 import com.jeta.forms.store.properties.effects.PaintProperty;
 import com.jeta.swingbuilder.gui.images.ImagePropertiesView;
@@ -113,7 +114,6 @@ public class ImageFillView extends ImagePropertiesView implements PaintView {
 
 	public int getVerticalAlignment() {
 		String item = (String) getSelectedItem(ImageFillNames.ID_VERTICAL_ALIGNMENT);
-		System.out.println("ImageFillView.getVerticalAlignment: " + item);
 		if ("CENTER".equals(item))
 			return ImageProperty.CENTER;
 		else if ("BOTTOM".equals(item))

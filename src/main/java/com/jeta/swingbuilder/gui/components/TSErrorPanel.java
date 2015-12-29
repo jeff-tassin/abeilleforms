@@ -70,9 +70,9 @@ public class TSErrorPanel extends JETAPanel {
 			msgbuff.append("\n");
 		}
 
-		String errormsg = e.getLocalizedMessage();
+		String errormsg = e == null ? "" : e.getLocalizedMessage();
 		if (errormsg == null || errormsg.length() == 0)
-			errormsg = e.getMessage();
+			errormsg = e == null ? "" : e.getMessage();
 		if (errormsg != null) {
 			int pos = errormsg.indexOf("Stack Trace");
 			if (pos >= 0)
@@ -82,7 +82,9 @@ public class TSErrorPanel extends JETAPanel {
 		if (msgbuff.length() > 0)
 			msgbuff.append('\n');
 
-		msgbuff.append(e.getClass().getName());
+		if ( e != null ) {
+			msgbuff.append(e.getClass().getName());
+		}
 		msgbuff.append(": ");
 		msgbuff.append(errormsg);
 		

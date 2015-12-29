@@ -194,7 +194,7 @@ public class FormManagerUtils {
 				}
 			}
 
-			FormsLogger.debug("FormManagerUtils.loadForm: " + relativePath);
+			//FormsLogger.debug("FormManagerUtils.loadForm: " + relativePath);
 
 			/**
 			 * Replace the path separator in case the form was stored on a

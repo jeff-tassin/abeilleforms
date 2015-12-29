@@ -234,8 +234,6 @@ public class DefaultProjectManager implements ProjectManager {
 		} else {
 			try {
 				String path = getAbsolutePath(imageName);
-				FormsLogger.debug( "DefaultProjectMgr.loadImage: " + imageName + "  path: " + path );
-
 				if (path != null) {
 					/**
 					 * The toolkit should be used to create the image, otherwise
@@ -305,12 +303,12 @@ public class DefaultProjectManager implements ProjectManager {
 				File f = new File(rootDir, src_path);
 				try {
 					if (f.isDirectory()) {
-						FormsLogger.debug("DefaultProjectManager loading (rel)project path: " + f.getCanonicalPath() + "  hash: " + this.hashCode());
+						//FormsLogger.debug("DefaultProjectManager loading (rel)project path: " + f.getCanonicalPath() + "  hash: " + this.hashCode());
 						m_source_dirs.add(f.getCanonicalPath());
 					} else {
 						f = new File(src_path);
 						if (f.isDirectory()) {
-							FormsLogger.debug("DefaultProjectManager loading (abs)project path: " + src_path);
+						//	FormsLogger.debug("DefaultProjectManager loading (abs)project path: " + src_path);
 							m_source_dirs.add(src_path);
 						}
 						else {

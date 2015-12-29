@@ -25,6 +25,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 import com.jeta.forms.components.panel.FormPanel;
+import com.jeta.forms.logger.FormsLogger;
 import com.jeta.forms.project.ProjectManager;
 import com.jeta.forms.store.properties.IconProperty;
 import com.jeta.open.gui.framework.JETAPanel;
@@ -71,6 +72,7 @@ public class ImagePropertiesView extends JETAPanel {
 	}
 
 	public IconProperty getIconProperty() {
+
 		String relpath = FormDesignerUtils.fastTrim(getRelativePath());
 		if (relpath.length() == 0)
 			return null;
@@ -106,8 +108,7 @@ public class ImagePropertiesView extends JETAPanel {
 	public void setIconProperty(IconProperty iProp) {
 		if (iProp == null) {
 
-		}
-		else {
+		} else {
 			setDescription(iProp.getDescription());
 			setRelativePath(iProp.getRelativePath());
 			ProjectManager pmgr = (ProjectManager) JETARegistry.lookup(ProjectManager.COMPONENT_ID);

@@ -1,0 +1,27 @@
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+// The shortcut form for declaring external dependencies looks like “group:name:version”.
+dependencies {
+    compile 'junit:junit:4.12', 'org.json:json:20151123',
+    files('thirdparty/dt.jar','thirdparty/jh.jar','thirdparty/batik-awt-util.jar')
+}
+
+
+task buildJar(type: Jar) {
+    manifest {
+        attributes 'Abeille Forms Designer': 'Forms Jar',  
+        	'Implementation-Version': 1.0,
+        	'Main-Class': 'com.jeta.swingbuilder.main.Launcher'
+    }
+    baseName = project.name 
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

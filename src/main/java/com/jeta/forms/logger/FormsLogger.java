@@ -31,7 +31,6 @@ package com.jeta.forms.logger;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.logging.Logger;
 
 import com.jeta.forms.gui.common.FormException;
 
@@ -68,8 +67,7 @@ public class FormsLogger {
 	 *            the message to send to the logger
 	 */
 	public static void debug(String msg) {
-		Logger logger = Logger.getLogger(LOGGER_NAME);
-		logger.finest(msg);
+		System.out.println(msg);
 	}
 
 	/**
@@ -80,7 +78,6 @@ public class FormsLogger {
 	 *            logger.
 	 */
 	public static void debug(Throwable t) {
-		Logger logger = Logger.getLogger(LOGGER_NAME);
 		if (t instanceof FormException) {
 			Exception e = ((FormException) t).getSourceException();
 			if (e != null)
@@ -88,7 +85,7 @@ public class FormsLogger {
 		}
 
 		String msg = getStackTrace(t);
-		logger.finest(msg);
+		debug(msg);
 	}
 
 	/**
@@ -98,8 +95,7 @@ public class FormsLogger {
 	 *            the message that is sent to the logger.
 	 */
 	public static void fine(String msg) {
-		Logger logger = Logger.getLogger(LOGGER_NAME);
-		logger.fine(msg);
+		debug(msg);
 	}
 
 	/**
@@ -109,8 +105,7 @@ public class FormsLogger {
 	 *            the message to send to the logger.
 	 */
 	public static void severe(String msg) {
-		Logger logger = Logger.getLogger(LOGGER_NAME);
-		logger.fine(msg);
+		debug(msg);
 	}
 
 	/**
@@ -121,13 +116,12 @@ public class FormsLogger {
 	 *            logger.
 	 */
 	public static void severe(Throwable t) {
-		Logger logger = Logger.getLogger(LOGGER_NAME);
 		if (t instanceof FormException) {
 			Exception e = ((FormException) t).getSourceException();
 			if (e != null)
 				t = e;
 		}
 		String msg = getStackTrace(t);
-		logger.severe(msg);
+		debug(msg);
 	}
 }

@@ -24,6 +24,7 @@ import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
+import com.jeta.forms.logger.FormsLogger;
 import com.jeta.forms.store.properties.effects.PaintProperty;
 import com.jeta.open.gui.framework.JETADialog;
 import com.jeta.open.gui.utils.JETAToolbox;

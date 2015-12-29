@@ -38,6 +38,7 @@ import javax.swing.JLabel;
 
 import com.jeta.forms.gui.effects.Paintable;
 import com.jeta.forms.gui.effects.Painter;
+import com.jeta.forms.logger.FormsLogger;
 
 /**
  * A standard JLabel that also supports anti-aliased fonts as well as background
@@ -95,9 +96,9 @@ public class JETALabel extends JLabel implements Paintable {
 	 */
 	public void paint(Graphics g) {
 		if (m_painter != null) {
-			if (m_bounds == null)
+			if (m_bounds == null) {
 				m_bounds = new Rectangle();
-
+			}
 			m_bounds.setBounds(0, 0, getWidth(), getHeight());
 			m_painter.paint(this, g, m_bounds);
 		}
@@ -114,7 +115,6 @@ public class JETALabel extends JLabel implements Paintable {
 	public void paintComponent(Graphics g) {
 		if (isAntiAliased()) {
 			Graphics2D g2d = (Graphics2D) g;
-
 			g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 		}
 		super.paintComponent(g);

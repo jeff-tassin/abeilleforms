@@ -48,8 +48,6 @@ import com.jgoodies.forms.layout.FormLayout;
  * could have used reflection to get this information, but this has implications
  * for WebStart applications.
  * 
- * @todo try to convince Karsten to provide effecient, public, read-only, access
- *       to the constraint map.
  * @author Jeff Tassin
  */
 public class GridComponentConstraints implements ComponentConstraints {
