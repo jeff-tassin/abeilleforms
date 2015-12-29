@@ -70,8 +70,8 @@ public class I18NHelper {
 	public void loadBundle(String bundleName) {
 		ResourceBundle currentbundle = null;
 		ResourceLoader loader = (ResourceLoader) JETARegistry.lookup(ResourceLoader.COMPONENT_ID);
-		currentbundle = ResourceBundle.getBundle(bundleName, m_locale, loader.getClassLoader());
-		m_bundles.add(currentbundle);
+		//currentbundle = ResourceBundle.getBundle(bundleName, m_locale, loader.getClassLoader());
+		//m_bundles.add(currentbundle);
 	}
 
 	public void setLocale(Locale locale) {

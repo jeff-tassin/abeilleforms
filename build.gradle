@@ -12,7 +12,7 @@ repositories {
 sourceSets {
     main {
         resources {
-        	srcDirs = ['src/main/resources/forms', 'src/main/resources/images']
+        	srcDirs = ['src/main/resources/forms', 'src/main/resources/images',  'src/main/resources/bundles']
         }
     }
 }
