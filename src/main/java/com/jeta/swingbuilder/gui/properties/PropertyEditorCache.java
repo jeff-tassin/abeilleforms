@@ -22,8 +22,6 @@ import java.awt.Component;
 import java.beans.PropertyEditor;
 
 import com.jeta.forms.gui.common.FormUtils;
-import com.jeta.forms.logger.FormsLogger;
-import com.sun.beans.editors.EnumEditor;
 
 public class PropertyEditorCache {
 	/**

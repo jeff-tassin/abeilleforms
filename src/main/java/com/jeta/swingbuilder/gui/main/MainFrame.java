@@ -612,7 +612,7 @@ public class MainFrame extends JFrame implements ComponentSource, GridViewListen
 
 		menu = new JMenu(I18N.getLocalizedMessage("Help"));
 		javax.swing.JMenuItem hitem = i18n_createMenuItem("Help Topics", MainFrameNames.ID_HELP, null);
-		com.jeta.swingbuilder.help.HelpUtils.enableHelpOnButton(hitem, MainFrameNames.ID_HELP);
+		//com.jeta.swingbuilder.help.HelpUtils.enableHelpOnButton(hitem, MainFrameNames.ID_HELP);
 		menu.add(hitem);
 		menu.add(i18n_createMenuItem("About", MainFrameNames.ID_ABOUT, null));
 		menuBar.add(menu);

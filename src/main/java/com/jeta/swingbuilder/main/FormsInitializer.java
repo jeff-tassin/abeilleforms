@@ -115,7 +115,7 @@ public class FormsInitializer {
 				/**
 				 * register the help manager
 				 */
-				JETARegistry.rebind(ComponentNames.APPLICATION_HELP_FACTORY, new AbeilleHelpFactory());
+				//JETARegistry.rebind(ComponentNames.APPLICATION_HELP_FACTORY, new AbeilleHelpFactory());
 			}
 			else {
 				System.out.println("Unable to establish home directory: " + tshome);
