@@ -1,5 +1,6 @@
 
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -24,7 +25,7 @@ dependencies {
 }
 
 
-task buildJar(type: Jar) {
+task deploy(type: Jar) {
     manifest {
         attributes 'Application': 'Abeille Forms Jar',  
         	'Implementation-Version': 1.0,
@@ -37,4 +38,21 @@ task buildJar(type: Jar) {
     	} 
     }
     with jar
+}
+
+
+// com/jeta/forms, com/jgoodies, com/jeta/open, org/apache, forms/invalid_comp.gif
+
+task runtime(type: Jar) {
+    description 'runtime task'
+	dependsOn deploy
+	archiveName = 'formsrt.jar'
+	from zipTree( 'build/libs/' + project.name + '.jar' ).matching {
+    		include { it.path.startsWith('com/jgoodies') }
+    		include { it.path.startsWith('com/jeta/forms') }
+    		include { it.path.startsWith('com/jeta/open') }
+    		include { it.path.startsWith('org/apache/batik') }
+    		include { it.path.endsWith( 'invalid_comp.gif' ) }
+    		exclude { it.isDirectory() }
+    	}
 }
