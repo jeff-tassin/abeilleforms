@@ -30,6 +30,7 @@ public class Launcher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		System.setProperty("swing.volatileImageBufferEnabled", "false" );
 		AbeilleForms fi = new AbeilleForms();
 		fi.launch(args);
 	}
