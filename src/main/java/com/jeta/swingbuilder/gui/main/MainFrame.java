@@ -199,7 +199,7 @@ public class MainFrame extends JFrame implements ComponentSource, GridViewListen
 	 * ctor
 	 */
 	public MainFrame() {
-		super("Abeille Forms Designer " + AbeilleForms.getVersionTitle());
+		super("Abeille Forms Designer");
 		FormsLogger.debug("Creating MainFrame");
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);

@@ -52,10 +52,10 @@ public class AboutView extends JETAPanel {
 			version = AbeilleForms.getVersion();
 		}
 		else {
-			version = I18N.format("forms_version_2", AbeilleForms.getVersion(), String.valueOf(AbeilleForms.BUILD_NUMBER));
+			version = I18N.format("forms_version_2", AbeilleForms.getVersion());
 		}
 
-		m_view.setText("version.label", "Version " + com.jeta.forms.support.AbeilleForms.getVersionEx());
+		m_view.setText("version.label", "Version " + com.jeta.forms.support.AbeilleForms.getVersion());
 	}
 
 	public void createCreditsPanel() {

@@ -105,7 +105,7 @@ public class FormsInitializer {
 				ApplicationStateStore appstore = new ApplicationStateStore("application");
 				JETARegistry.rebind(ComponentNames.APPLICATION_STATE_STORE, appstore);
 				System.setProperty("abeilleforms.home", tshome);
-				System.setProperty("abeilleforms.version", com.jeta.forms.support.AbeilleForms.getVersionEx());
+				System.setProperty("abeilleforms.version", com.jeta.forms.support.AbeilleForms.getVersion());
 
 				/**
 				 * Initialize the components needed by the swing builder system.

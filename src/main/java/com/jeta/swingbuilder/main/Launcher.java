@@ -30,6 +30,9 @@ public class Launcher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/**
+		 * Fix Mac slow rendering
+		 */
 		System.setProperty("swing.volatileImageBufferEnabled", "false" );
 		AbeilleForms fi = new AbeilleForms();
 		fi.launch(args);
