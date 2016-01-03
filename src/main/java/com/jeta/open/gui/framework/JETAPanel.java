@@ -47,6 +47,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTree;
 import javax.swing.text.JTextComponent;
@@ -456,6 +457,22 @@ public class JETAPanel extends JPanel implements JETAContainer, SwingComponentSu
 
 	}
 
+	/**
+	 * Returns the JTextArea that is contained in this panel and has the given
+	 * name. If the component is not found nor is a JTextField, null is
+	 * returned.
+	 * 
+	 * @return the named JTextField
+	 */
+	public JTextArea getTextArea(String compName) {
+		Component comp = getComponentByName(compName);
+		if (comp instanceof JTextArea)
+			return (JTextArea) comp;
+		else
+			return null;
+
+	}
+	
 	/**
 	 * Returns the text property from a Component. If a component is not found
 	 * with the given name or a component does not have a text property, then
