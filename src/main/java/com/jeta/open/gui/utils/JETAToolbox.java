@@ -35,6 +35,11 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Frame;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.Window;
 import java.awt.datatransfer.Clipboard;
@@ -123,13 +128,14 @@ public class JETAToolbox {
 	 * This method centers and sizes a frame window on the screen. The caller
 	 * must pass the x and y percentages of screen width/height.
 	 */
-	public static void centerFrame(Window frame, float xpctWidth, float ypctWidth) {
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		int frame_width = (int) (screenSize.width * xpctWidth);
-		int frame_height = (int) (screenSize.height * ypctWidth);
-		int left = (screenSize.width - frame_width) / 2;
-		int top = (screenSize.height - frame_height) / 2;
-		frame.setBounds(left, top, frame_width, frame_height);
+	public static void centerFrame( Rectangle monitorBounds, Window frame, float xpctWidth, float ypctWidth) {
+		
+		int frame_width = (int) (monitorBounds.width * xpctWidth);
+		int frame_height = (int) (monitorBounds.height * ypctWidth);
+		int left = (monitorBounds.width - frame_width) / 2 + monitorBounds.x;
+		int top = (monitorBounds.height - frame_height) / 2 + monitorBounds.y;
+		frame.setLocation(left,top);
+		frame.setSize( frame_width, frame_height);
 	}
 
 	/**
@@ -137,12 +143,22 @@ public class JETAToolbox {
 	 * the x and y percentages of screen width/height.
 	 */
 	public static void centerWindow(Window frame) {
+		int mouseX = 0;
+		int mouseY = 0;
+		try {
+			Point mouse = MouseInfo.getPointerInfo().getLocation(); 
+			mouseX = mouse.x;
+			mouseY = mouse.y;
+		} catch( Exception e ) {
+			// ignore
+		}
+		Rectangle monitorBounds = getMonitorBounds( mouseX, mouseY );
 		float width = (float) frame.getWidth();
 		float height = (float) frame.getHeight();
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		float pctwidth = width / (float) screenSize.getWidth();
-		float pctheight = height / (float) screenSize.getHeight();
-		centerFrame(frame, pctwidth, pctheight);
+ 
+		float pctwidth = width / (float) monitorBounds.getWidth();
+		float pctheight = height / (float) monitorBounds.getHeight();
+		centerFrame( monitorBounds, frame, pctwidth, pctheight);
 	}
 
 	/**
@@ -154,9 +170,37 @@ public class JETAToolbox {
 		float height = (float) frame.getHeight();
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		float pctheight = height / (float) screenSize.getHeight();
-		centerFrame(frame, xpctWidth, pctheight);
+		
+		int mouseX = 0;
+		int mouseY = 0;
+		try {
+			Point mouse = MouseInfo.getPointerInfo().getLocation(); 
+			mouseX = mouse.x;
+			mouseY = mouse.y;
+		} catch( Exception e ) {
+			// ignore
+		}
+		Rectangle monitorBounds = getMonitorBounds( mouseX, mouseY );
+		
+		centerFrame( monitorBounds, frame, xpctWidth, pctheight);
 	}
 
+	public static Rectangle getMonitorBounds(int mouseX, int mouseY) {
+		try {
+			for( GraphicsDevice device : GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices() ) {
+				Rectangle bounds = device.getDefaultConfiguration().getBounds();
+				if ( bounds.contains( mouseX, mouseY ) ) {
+					return bounds;
+				}
+			}
+		} catch( Exception e ) {
+			// ignore
+		}
+		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+		return new Rectangle(0, 0, d.width, d.height );
+	}
+
+	
 	/**
 	 * Copies to the clipboard the given string
 	 */

@@ -62,7 +62,7 @@ public class AboutView extends JETAPanel {
 		JEditorPane editor = (JEditorPane) m_view.getComponentByName(AboutViewNames.ID_CREDITS);
 		editor.setEditorKit(new javax.swing.text.html.HTMLEditorKit());
 		try {
-			java.net.URL url = AboutView.class.getClassLoader().getResource("com/jeta/swingbuilder/resources/help/credits.htm");
+			java.net.URL url = AboutView.class.getClassLoader().getResource("credits.htm");
 			editor.setPage(url);
 			editor.setEditable(false);
 		} catch (Exception e) {

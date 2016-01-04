@@ -32,6 +32,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JWindow;
 
+import com.jeta.open.gui.utils.JETAToolbox;
+
 /**
  * Splash screen for the application
  * 
@@ -62,10 +64,7 @@ public class Splash extends JWindow {
 					dispose();
 				}
 			});
-
-			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-			Dimension labelSize = label.getPreferredSize();
-			setLocation(screenSize.width / 2 - (labelSize.width / 2), screenSize.height / 2 - (labelSize.height / 2));
+			JETAToolbox.centerWindow(this);
 			setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();

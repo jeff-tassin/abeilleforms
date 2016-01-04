@@ -1,7 +1,5 @@
 package com.jeta.forms.support;
 
-import com.jeta.forms.gui.common.FormUtils;
-
 /**
  * AbeilleForms.java is an automatically generated java file. If you want to
  * make changes, you must edit the AbeilleForms.txt file. The build script will
@@ -24,7 +22,6 @@ public class AbeilleForms {
 		buffer.append(MINOR_VERSION);
 		buffer.append(".");
 		buffer.append(SUBMINOR_VERSION);
-		buffer.append(".");
 		return buffer.toString();
 	}
 

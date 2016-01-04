@@ -42,6 +42,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
@@ -421,6 +422,21 @@ public class JETAPanel extends JPanel implements JETAContainer, SwingComponentSu
 		Component comp = getComponentByName(compName);
 		if (comp instanceof JTabbedPane)
 			return (JTabbedPane) comp;
+		else
+			return null;
+	}
+	
+	/**
+	 * Returns the JPasswordField that is contained in this panel and has the given
+	 * name. If the component is not found nor is a JPasswordField, null is
+	 * returned.
+	 * 
+	 * @return the named JPasswordField
+	 */
+	public JPasswordField getPasswordField(String compName) {
+		Component comp = getComponentByName(compName);
+		if (comp instanceof JPasswordField)
+			return (JPasswordField) comp;
 		else
 			return null;
 	}
