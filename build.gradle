@@ -24,7 +24,7 @@ dependencies {
 }
 
 
-task deploy(type: Jar) {
+task designer(type: Jar, dependsOn: build) {
     manifest {
         attributes 'Application': 'Abeille Forms Jar',  
         	'Implementation-Version': 1.0,
@@ -39,12 +39,8 @@ task deploy(type: Jar) {
     with jar
 }
 
-
-// com/jeta/forms, com/jgoodies, com/jeta/open, org/apache, forms/invalid_comp.gif
-
-task runtime(type: Jar) {
+task deploy(type: Jar, dependsOn: designer ) {
     description 'runtime task'
-	dependsOn deploy
 	archiveName = 'formsrt.jar'
 	from zipTree( 'build/libs/' + project.name + '.jar' ).matching {
     		include { it.path.startsWith('com/jgoodies') }
