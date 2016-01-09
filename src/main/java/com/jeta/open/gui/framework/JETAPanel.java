@@ -702,6 +702,13 @@ public class JETAPanel extends JPanel implements JETAContainer, SwingComponentSu
 			}
 		}
 	}
+	
+	public void setToolTipText(String compName, String text) {
+		Component comp = getComponentByName(compName);
+		if ( comp instanceof JComponent ) {
+			((JComponent)comp).setToolTipText(text);
+		}
+	}
 
 	/**
 	 * This is a helper method that simply forwards the call to the controller

@@ -517,6 +517,7 @@ public class JETADialog extends JDialog {
 		}
 		m_primaryPanel = primaryPanel;
 		m_contentpane.add(primaryPanel, BorderLayout.CENTER);
+		m_contentpane.revalidate();
 	}
 
 	/**
