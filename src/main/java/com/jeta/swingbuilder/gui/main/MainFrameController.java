@@ -558,11 +558,14 @@ public class MainFrameController extends FormEditorController {
 			dlg.pack();
 			dlg.showOkButton(false);
 			dlg.setCloseText(I18N.getLocalizedMessage("Close"));
-			Dimension d = dlg.getSize();
+			/*
+                        Dimension d = dlg.getSize();
 			if (JETAToolbox.isWindows() || JETAToolbox.isOSX()) {
 				d.width -= 2;
 				dlg.setSize(d);
 			}
+                        */
+			dlg.setSize( new java.awt.Dimension(430,350) );
 			dlg.showCenter();
 		}
 	}

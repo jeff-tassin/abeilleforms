@@ -1,7 +1,26 @@
-.classpath
-.project
-.settings
+stderr.txt
+stdout.txt
+
+# maven
 target
-.gradle
-bin
+
+# gradle
 build
+.gradle
+
+# eclipse
+bin
+.classpath
+.settings
+.project
+
+# intellij
+.idea
+out
+*.iml
+
+
+# mac
+.DS_Store
+
+
