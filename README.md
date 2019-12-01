@@ -1,4 +1,4 @@
-# ![Abeille Forms](https://raw.githubusercontent.com/jeff-tassin/abeilleforms/master/examples/images/bee.png) Abeille Forms Designer
+# ![Abeille Forms Designer is a tool for quickly designing cross-platform graphical user interfaces. Forms Designer is a Swing based application and uses Swing components](https://raw.githubusercontent.com/jeff-tassin/abeilleforms/master/examples/images/bee.png) Abeille Forms Designer
 
 Abeille Forms Designer is a tool for quickly designing cross-platform graphical user interfaces. Forms Designer is a Swing based application and uses Swing components.
 
