@@ -48,8 +48,8 @@ public class VerticalLineComponentFactory extends JComponentBeanFactory {
 	 */
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
-		TransformOptionsProperty prop = new TransformOptionsProperty("position", "getPosition", "setPosition", new Object[][] { { "CENTER", new Integer(0) },
-				{ "LEFT", new Integer(1) }, { "RIGHT", new Integer(2) } });
+		TransformOptionsProperty prop = new TransformOptionsProperty("position", "getPosition", "setPosition", new Object[][] { { "CENTER", 0 },
+				{ "LEFT", 1 }, { "RIGHT", 2 } });
 		props.register(prop);
 	}
 }

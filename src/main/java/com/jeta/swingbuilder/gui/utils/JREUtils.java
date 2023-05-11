@@ -43,7 +43,7 @@ public final class JREUtils {
 	public static String getProperty(String key, String defaultValue) {
 		try {
 			return System.getProperty(key);
-		} catch (AccessControlException ace) {
+		} catch (Error ace) {
 			return defaultValue;
 		}
 	}

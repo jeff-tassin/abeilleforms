@@ -6,31 +6,31 @@ public class PrimitiveHolderHandler extends ObjectHandler {
 		String classname = (String) getProperty("primitive");
 		String value = (String) getProperty("value");
 		if ("java.lang.Byte".equals(classname)) {
-			return new Byte(value);
+			return value;
 		}
 		else if ("java.lang.Boolean".equals(classname)) {
-			return new Boolean(value);
+			return value;
 		}
 		else if ("java.lang.Character".equals(classname)) {
 			if (value == null || value.length() == 0)
-				return new Character('\0');
+				return '\0';
 			else
-				return new Character(value.charAt(0));
+				return value.charAt(0);
 		}
 		else if ("java.lang.Short".equals(classname)) {
-			return new Short(value);
+			return value;
 		}
 		else if ("java.lang.Integer".equals(classname)) {
-			return new Integer(value);
+			return value;
 		}
 		else if ("java.lang.Long".equals(classname)) {
-			return new Long(value);
+			return value;
 		}
 		else if ("java.lang.Float".equals(classname)) {
-			return new Float(value);
+			return value;
 		}
 		else if ("java.lang.Double".equals(classname)) {
-			return new Double(value);
+			return value;
 		}
 		else {
 			assert (false);

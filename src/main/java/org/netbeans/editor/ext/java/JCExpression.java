@@ -318,7 +318,7 @@ public class JCExpression {
 		}
 
 		tokenBlocks[tokenCountM3++] = tokenID;
-		tokenBlocks[tokenCountM3++] = new Integer(tokenOffset);
+		tokenBlocks[tokenCountM3++] = tokenOffset;
 		tokenBlocks[tokenCountM3++] = tokenText;
 	}
 

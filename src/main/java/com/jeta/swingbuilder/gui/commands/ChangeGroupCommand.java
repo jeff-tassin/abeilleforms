@@ -50,8 +50,8 @@ public class ChangeGroupCommand extends FormUndoableEdit {
 	 */
 	public ChangeGroupCommand(FormComponent form, int newGroup, int oldGroup, int index, boolean row) {
 		super(form);
-		m_new_group = new Integer(newGroup);
-		m_old_group = new Integer(oldGroup);
+		m_new_group = newGroup;
+		m_old_group = oldGroup;
 		m_index = index;
 		m_is_row = row;
 	}

@@ -44,12 +44,12 @@ public class ExtSettingsDefaults extends SettingsDefaults {
 
 	public static final Boolean defaultHighlightCaretRow = Boolean.FALSE;
 	public static final Boolean defaultHighlightMatchBrace = Boolean.TRUE;
-	public static final Integer defaultHighlightMatchBraceDelay = new Integer(100);
+	public static final Integer defaultHighlightMatchBraceDelay = 100;
 	public static final Boolean defaultCaretSimpleMatchBrace = Boolean.TRUE;
 
 	public static final Boolean defaultCompletionAutoPopup = Boolean.TRUE;
-	public static final Integer defaultCompletionAutoPopupDelay = new Integer(500);
-	public static final Integer defaultCompletionRefreshDelay = new Integer(200);
+	public static final Integer defaultCompletionAutoPopupDelay = 500;
+	public static final Integer defaultCompletionRefreshDelay = 200;
 	public static final Dimension defaultCompletionPaneMaxSize = new Dimension(400, 300);
 	public static final Dimension defaultCompletionPaneMinSize = new Dimension(60, 30);
 	public static final Boolean defaultDisplayGoToClassInfo = Boolean.TRUE;

@@ -145,7 +145,7 @@ public class GuardedDocument extends BaseDocument implements StyledDocument {
 																								// endMark
 				&& !(text.charAt(text.length() - 1) == '\n' && rel == MarkBlock.INSIDE_BEGIN)) {
 			if (!breakGuarded || atomicAsUser) {
-				throw new GuardedException(MessageFormat.format(LocaleSupport.getString(FMT_GUARDED_INSERT_LOCALE), new Object[] { new Integer(offset) }),
+				throw new GuardedException(MessageFormat.format(LocaleSupport.getString(FMT_GUARDED_INSERT_LOCALE), new Object[] { offset }),
 						offset);
 			}
 		}
@@ -171,7 +171,7 @@ public class GuardedDocument extends BaseDocument implements StyledDocument {
 		if ((rel & MarkBlock.OVERLAP) != 0 || (rel == MarkBlock.CONTINUE_BEGIN && !(offset == 0 || getChars(offset - 1, 1)[0] == '\n'))) {
 			if (!breakGuarded || atomicAsUser) {
 				// test whether the previous char before removed text is '\n'
-				throw new GuardedException(MessageFormat.format(LocaleSupport.getString(FMT_GUARDED_REMOVE_LOCALE), new Object[] { new Integer(offset) }),
+				throw new GuardedException(MessageFormat.format(LocaleSupport.getString(FMT_GUARDED_REMOVE_LOCALE), new Object[] { offset }),
 						offset);
 			}
 		}

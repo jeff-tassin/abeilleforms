@@ -61,10 +61,10 @@ public class ImageBeanFactory extends JComponentBeanFactory {
 		super.defineProperties(props);
 
 		TransformOptionsProperty hp = new TransformOptionsProperty("horizontalAlignment", "getHorizontalAlignment", "setHorizontalAlignment", new Object[][] {
-				{ "LEFT", new Integer(ImageProperty.LEFT) }, { "CENTER", new Integer(ImageProperty.CENTER) }, { "RIGHT", new Integer(ImageProperty.RIGHT) } });
+				{ "LEFT", ImageProperty.LEFT }, { "CENTER", ImageProperty.CENTER }, { "RIGHT", ImageProperty.RIGHT } });
 
 		TransformOptionsProperty vp = new TransformOptionsProperty("verticalAlignment", "getVerticalAlignment", "setVerticalAlignment", new Object[][] {
-				{ "TOP", new Integer(ImageProperty.TOP) }, { "CENTER", new Integer(ImageProperty.CENTER) }, { "BOTTOM", new Integer(ImageProperty.BOTTOM) } });
+				{ "TOP", ImageProperty.TOP }, { "CENTER", ImageProperty.CENTER }, { "BOTTOM", ImageProperty.BOTTOM } });
 		props.register(hp);
 		props.register(vp);
 	}

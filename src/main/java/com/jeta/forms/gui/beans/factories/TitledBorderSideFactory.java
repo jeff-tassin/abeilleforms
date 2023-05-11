@@ -52,7 +52,7 @@ public class TitledBorderSideFactory extends JComponentBeanFactory {
 		super.defineProperties(props);
 
 		TransformOptionsProperty justprop = new TransformOptionsProperty("orientation", "getOrientation", "setOrientation", new Object[][] {
-				{ "LEFT", new Integer(TitledBorderSide.LEFT) }, { "RIGHT", new Integer(TitledBorderSide.RIGHT) } });
+				{ "LEFT", TitledBorderSide.LEFT }, { "RIGHT", TitledBorderSide.RIGHT } });
 		justprop.setPreferred(true);
 		props.register(justprop);
 	}

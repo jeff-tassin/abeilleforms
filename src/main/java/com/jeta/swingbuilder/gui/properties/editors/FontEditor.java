@@ -105,7 +105,7 @@ public class FontEditor extends JETAPropertyEditor {
 			m_painter.setValue(I18N.format("font_description_2", "null", ""));
 		}
 		else {
-			m_painter.setValue(I18N.format("font_description_2", font.getFamily(), new Integer(font.getSize())));
+			m_painter.setValue(I18N.format("font_description_2", font.getFamily(), font.getSize()));
 			if (font.isBold())
 				m_styles[0] = m_bold_icon;
 			else

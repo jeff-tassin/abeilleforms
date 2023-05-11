@@ -74,7 +74,7 @@ public class GradientView extends JETAPanel implements PaintView {
 
 		JSpinner sp = (JSpinner) m_view.getSpinner(GradientNames.ID_MAGNITUDE_SPINNER);
 		sp.setModel(new SpinnerNumberModel(1, 1, 1000, 1));
-		sp.setValue(new Integer(100));
+		sp.setValue(100);
 
 		if (gp != null) {
 			initialize((GradientProperty) gp.getPaintDelegate());
@@ -135,7 +135,7 @@ public class GradientView extends JETAPanel implements PaintView {
 
 	public void setMagnitude(float mag) {
 		SpinnerNumberModel spm = (SpinnerNumberModel) m_view.getSpinner(GradientNames.ID_MAGNITUDE_SPINNER).getModel();
-		spm.setValue(new Integer((int) (mag * 100.0f)));
+		spm.setValue((int) (mag * 100.0f));
 	}
 
 	/**

@@ -67,7 +67,7 @@ public class LinePropertiesView extends JETAPanel {
 
 		JSpinner sp = m_view.getSpinner(LinePropertiesNames.ID_LINE_THICKNESS_FIELD);
 		sp.setModel(new SpinnerNumberModel(1, 1, 100, 1));
-		sp.setValue(new Integer(m_prop.getThickness()));
+		sp.setValue(m_prop.getThickness());
 
 		m_view.setColorProperty(LinePropertiesNames.ID_COLOR_SELECTOR, m_prop.getColorProperty());
 		setController(new LinePropertiesController(this));

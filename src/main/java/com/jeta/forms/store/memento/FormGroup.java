@@ -71,7 +71,7 @@ public class FormGroup extends AbstractJETAPersistable {
 	 */
 	void assign(int index) {
 		if (!contains(index)) {
-			m_indexes.add(new Integer(index));
+			m_indexes.add(index);
 		}
 	}
 

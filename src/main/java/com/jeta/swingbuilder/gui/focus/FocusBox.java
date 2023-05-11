@@ -177,7 +177,7 @@ public class FocusBox extends JPanel {
 			SpinnerNumberModel smodel = (SpinnerNumberModel) m_spinner.getModel();
 			Integer ival = (Integer) smodel.getValue();
 			if (ival.intValue() != index) {
-				smodel.setValue(new Integer(index));
+				smodel.setValue(index);
 			}
 		}
 		m_focus_glyph.setIndex(index);

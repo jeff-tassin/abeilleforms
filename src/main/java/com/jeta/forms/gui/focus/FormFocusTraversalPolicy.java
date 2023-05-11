@@ -76,7 +76,7 @@ public class FormFocusTraversalPolicy extends FocusTraversalPolicy {
 		m_focus_list.addAll(components);
 		for (int index = 0; index < m_focus_list.size(); index++) {
 			Component comp = (Component) m_focus_list.get(index);
-			m_comp_map.put(comp, new Integer(index));
+			m_comp_map.put(comp, index);
 		}
 	}
 

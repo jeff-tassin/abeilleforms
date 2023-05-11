@@ -15,6 +15,9 @@ dependencies {
     implementation 'junit:junit:4.12', 'org.json:json:20151123', files('thirdparty/dt.jar','thirdparty/batik-awt-util.jar')
 }
 
+tasks.withType(JavaCompile) {
+	options.warnings = true
+}
 
 task designer(type: Jar, dependsOn: build) {
     manifest {

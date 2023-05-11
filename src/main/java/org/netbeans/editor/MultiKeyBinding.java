@@ -230,7 +230,7 @@ public class MultiKeyBinding extends JTextComponent.KeyBinding implements java.i
 	public void writeExternal(java.io.ObjectOutput out) throws java.io.IOException {
 
 		if (keys != null) {
-			out.writeObject(new Integer(keys.length));
+			out.writeObject(keys.length);
 			for (int i = 0; i < keys.length; i++) {
 				out.writeInt(keys[i].getKeyCode());
 				out.writeInt(keys[i].getModifiers());

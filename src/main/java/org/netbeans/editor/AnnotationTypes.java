@@ -196,7 +196,7 @@ public class AnnotationTypes {
 		loadSettings();
 
 		if (getProp(PROP_BACKGROUND_GLYPH_ALPHA) == null)
-			return new Integer(40);
+			return 40;
 		return (Integer) getProp(PROP_BACKGROUND_GLYPH_ALPHA);
 	}
 
@@ -210,7 +210,7 @@ public class AnnotationTypes {
 		if (alpha < 0 || alpha > 100) {
 			return;
 		}
-		Integer i = new Integer(alpha);
+		Integer i = alpha;
 		putProp(PROP_BACKGROUND_GLYPH_ALPHA, i);
 		firePropertyChange(PROP_BACKGROUND_GLYPH_ALPHA, null, null);
 		// force repaint of all documents

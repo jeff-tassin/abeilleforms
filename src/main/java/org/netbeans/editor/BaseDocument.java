@@ -308,43 +308,43 @@ public class BaseDocument extends AbstractDocument implements SettingsChangeList
 
 		if (settingName == null || SettingsNames.READ_BUFFER_SIZE.equals(settingName)) {
 			int readBufferSize = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.READ_BUFFER_SIZE, SettingsDefaults.defaultReadBufferSize);
-			putProperty(SettingsNames.READ_BUFFER_SIZE, new Integer(readBufferSize));
+			putProperty(SettingsNames.READ_BUFFER_SIZE, readBufferSize);
 		}
 
 		if (settingName == null || SettingsNames.WRITE_BUFFER_SIZE.equals(settingName)) {
 			int writeBufferSize = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.WRITE_BUFFER_SIZE, SettingsDefaults.defaultWriteBufferSize);
-			putProperty(SettingsNames.WRITE_BUFFER_SIZE, new Integer(writeBufferSize));
+			putProperty(SettingsNames.WRITE_BUFFER_SIZE, writeBufferSize);
 		}
 
 		if (settingName == null || SettingsNames.MARK_DISTANCE.equals(settingName)) {
 			int markDistance = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.MARK_DISTANCE, SettingsDefaults.defaultMarkDistance);
-			putProperty(SettingsNames.MARK_DISTANCE, new Integer(markDistance));
+			putProperty(SettingsNames.MARK_DISTANCE, markDistance);
 		}
 
 		if (settingName == null || SettingsNames.MAX_MARK_DISTANCE.equals(settingName)) {
 			int maxMarkDistance = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.MAX_MARK_DISTANCE, SettingsDefaults.defaultMaxMarkDistance);
-			putProperty(SettingsNames.MAX_MARK_DISTANCE, new Integer(maxMarkDistance));
+			putProperty(SettingsNames.MAX_MARK_DISTANCE, maxMarkDistance);
 		}
 
 		if (settingName == null || SettingsNames.MIN_MARK_DISTANCE.equals(settingName)) {
 			int minMarkDistance = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.MIN_MARK_DISTANCE, SettingsDefaults.defaultMinMarkDistance);
-			putProperty(SettingsNames.MIN_MARK_DISTANCE, new Integer(minMarkDistance));
+			putProperty(SettingsNames.MIN_MARK_DISTANCE, minMarkDistance);
 		}
 
 		if (settingName == null || SettingsNames.READ_MARK_DISTANCE.equals(settingName)) {
 			int readMarkDistance = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.READ_MARK_DISTANCE, SettingsDefaults.defaultReadMarkDistance);
-			putProperty(SettingsNames.READ_MARK_DISTANCE, new Integer(readMarkDistance));
+			putProperty(SettingsNames.READ_MARK_DISTANCE, readMarkDistance);
 		}
 
 		if (settingName == null || SettingsNames.SYNTAX_UPDATE_BATCH_SIZE.equals(settingName)) {
 			int syntaxUpdateBatchSize = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.SYNTAX_UPDATE_BATCH_SIZE,
 					SettingsDefaults.defaultSyntaxUpdateBatchSize);
-			putProperty(SettingsNames.SYNTAX_UPDATE_BATCH_SIZE, new Integer(syntaxUpdateBatchSize));
+			putProperty(SettingsNames.SYNTAX_UPDATE_BATCH_SIZE, syntaxUpdateBatchSize);
 		}
 
 		if (settingName == null || SettingsNames.LINE_BATCH_SIZE.equals(settingName)) {
 			int lineBatchSize = SettingsUtil.getPositiveInteger(kitClass, SettingsNames.LINE_BATCH_SIZE, SettingsDefaults.defaultLineBatchSize);
-			putProperty(SettingsNames.LINE_BATCH_SIZE, new Integer(lineBatchSize));
+			putProperty(SettingsNames.LINE_BATCH_SIZE, lineBatchSize);
 		}
 
 		if (settingName == null || SettingsNames.IDENTIFIER_ACCEPTOR.equals(settingName)) {
@@ -494,7 +494,7 @@ public class BaseDocument extends AbstractDocument implements SettingsChangeList
 		if (posID >= 0 || posID < posList.size()) {
 			Mark mark = (Mark) posList.get(posID);
 			posList.set(posID, null); // clear the index
-			posFreeList.add(new Integer(posID));
+			posFreeList.add(posID);
 
 			// Remove the mark #19429
 			try {

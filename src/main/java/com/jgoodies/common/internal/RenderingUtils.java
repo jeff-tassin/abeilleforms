@@ -140,8 +140,8 @@ public final class RenderingUtils {
         if (drawStringUnderlineCharAtMethod != null) {
             try {
                 drawStringUnderlineCharAtMethod.invoke(null,
-                        new Object[] {c, g, text, new Integer(underlinedIndex),
-                                      new Integer(x), new Integer(y)});
+                        new Object[] {c, g, text, underlinedIndex,
+                                      x, y});
                 return;
             } catch (IllegalArgumentException e) {
                 // Use the BasicGraphicsUtils as fallback

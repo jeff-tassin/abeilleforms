@@ -60,7 +60,7 @@ class DrawLayerList {
 		layers = new DrawLayer[layers.length + 1];
 		l.toArray(layers);
 
-		visibilityList.add(indAdd, new Integer(visibility));
+		visibilityList.add(indAdd, visibility);
 
 		return true;
 	}

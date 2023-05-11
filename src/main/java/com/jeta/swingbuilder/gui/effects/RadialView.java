@@ -72,7 +72,7 @@ public class RadialView extends JETAPanel implements PaintView {
 
 		JSpinner sp = (JSpinner) m_view.getSpinner(RadialNames.ID_MAGNITUDE_SPINNER);
 		sp.setModel(new SpinnerNumberModel(1, 1, 1000, 1));
-		sp.setValue(new Integer(100));
+		sp.setValue(100);
 
 		if (pp != null) {
 			initialize((RadialGradientProperty) pp.getPaintDelegate());
@@ -135,7 +135,7 @@ public class RadialView extends JETAPanel implements PaintView {
 	public void setMagnitude(int mag) {
 		JSpinner sp = (JSpinner) m_view.getSpinner(RadialNames.ID_MAGNITUDE_SPINNER);
 		sp.setModel(new SpinnerNumberModel(1, 1, 1000, 1));
-		sp.setValue(new Integer(mag));
+		sp.setValue(mag);
 	}
 
 	/**

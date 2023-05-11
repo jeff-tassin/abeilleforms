@@ -87,7 +87,7 @@ public class FormDesignerUtils {
 					GridComponent gc_existing = parentview.getGridComponent(col, row);
 					assert (gc_existing != gc);
 					if (gc_existing.hasBean()) {
-						String msg = I18N.format("Components_would_overlap_at_cell_2", new Integer(col), new Integer(row));
+						String msg = I18N.format("Components_would_overlap_at_cell_2", col, row);
 						String title = I18N.getLocalizedMessage("Error");
 						JOptionPane.showMessageDialog(gc, msg, title, JOptionPane.ERROR_MESSAGE);
 						return false;

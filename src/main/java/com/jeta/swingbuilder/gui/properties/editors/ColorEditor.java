@@ -81,7 +81,7 @@ public class ColorEditor extends JETAPropertyEditor {
 
 			if (!c.equals(m_last_color)) {
 				m_last_color = c;
-				m_rgb = I18N.format("RGB_3", new Integer(c.getRed()), new Integer(c.getGreen()), new Integer(c.getBlue()));
+				m_rgb = I18N.format("RGB_3", c.getRed(), c.getGreen(), c.getBlue());
 			}
 			m_value_painter.drawString(g, rect, box_width + 10, m_rgb);
 

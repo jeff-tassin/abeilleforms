@@ -67,22 +67,22 @@ public class LabelBeanFactory extends JComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty hprop = new TransformOptionsProperty("horizontalAlignment", "getHorizontalAlignment", "setHorizontalAlignment",
-				new Object[][] { { "LEFT", new Integer(SwingConstants.LEFT) }, { "CENTER", new Integer(SwingConstants.CENTER) },
-						{ "RIGHT", new Integer(SwingConstants.RIGHT) }, { "LEADING", new Integer(SwingConstants.LEADING) },
-						{ "TRAILING", new Integer(SwingConstants.TRAILING) } });
+				new Object[][] { { "LEFT", SwingConstants.LEFT }, { "CENTER", SwingConstants.CENTER },
+						{ "RIGHT", SwingConstants.RIGHT }, { "LEADING", SwingConstants.LEADING },
+						{ "TRAILING", SwingConstants.TRAILING } });
 
 		TransformOptionsProperty htprop = new TransformOptionsProperty("horizontalTextPosition", "getHorizontalTextPosition", "setHorizontalTextPosition",
-				new Object[][] { { "LEFT", new Integer(SwingConstants.LEFT) }, { "CENTER", new Integer(SwingConstants.CENTER) },
-						{ "RIGHT", new Integer(SwingConstants.RIGHT) }, { "LEADING", new Integer(SwingConstants.LEADING) },
-						{ "TRAILING", new Integer(SwingConstants.TRAILING) } });
+				new Object[][] { { "LEFT", SwingConstants.LEFT }, { "CENTER", SwingConstants.CENTER },
+						{ "RIGHT", SwingConstants.RIGHT }, { "LEADING", SwingConstants.LEADING },
+						{ "TRAILING", SwingConstants.TRAILING } });
 
 		TransformOptionsProperty vprop = new TransformOptionsProperty("verticalAlignment", "getVerticalAlignment", "setVerticalAlignment",
-				new Object[][] { { "TOP", new Integer(SwingConstants.TOP) }, { "CENTER", new Integer(SwingConstants.CENTER) },
-						{ "BOTTOM", new Integer(SwingConstants.BOTTOM) } });
+				new Object[][] { { "TOP", SwingConstants.TOP }, { "CENTER", SwingConstants.CENTER },
+						{ "BOTTOM", SwingConstants.BOTTOM } });
 
 		TransformOptionsProperty vtprop = new TransformOptionsProperty("verticalTextPosition", "getVerticalTextPosition", "setVerticalTextPosition",
-				new Object[][] { { "TOP", new Integer(SwingConstants.TOP) }, { "CENTER", new Integer(SwingConstants.CENTER) },
-						{ "BOTTOM", new Integer(SwingConstants.BOTTOM) } });
+				new Object[][] { { "TOP", SwingConstants.TOP }, { "CENTER", SwingConstants.CENTER },
+						{ "BOTTOM", SwingConstants.BOTTOM } });
 		htprop.setPreferred(false);
 		vtprop.setPreferred(false);
 

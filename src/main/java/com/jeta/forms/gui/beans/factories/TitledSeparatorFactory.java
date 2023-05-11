@@ -51,8 +51,8 @@ public class TitledSeparatorFactory extends JComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty oprop = new TransformOptionsProperty("alignment", "getAlignment", "setAlignment",
-				new Object[][] { { "LEFT", new Integer(SwingConstants.LEFT) }, { "CENTER", new Integer(SwingConstants.CENTER) },
-						{ "RIGHT", new Integer(SwingConstants.RIGHT) } });
+				new Object[][] { { "LEFT", SwingConstants.LEFT }, { "CENTER", SwingConstants.CENTER },
+						{ "RIGHT", SwingConstants.RIGHT } });
 
 		oprop.setPreferred(true);
 		props.register(oprop);

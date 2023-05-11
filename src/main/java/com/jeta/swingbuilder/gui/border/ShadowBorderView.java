@@ -38,7 +38,7 @@ public class ShadowBorderView extends AbstractBorderView {
 
 		JSpinner sp = getSpinner(ShadowBorderNames.ID_THICKNESS_SPINNER);
 		sp.setModel(new SpinnerNumberModel(1, 1, 100, 1));
-		sp.setValue(new Integer(1));
+		sp.setValue(1);
 		setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
 	}
 

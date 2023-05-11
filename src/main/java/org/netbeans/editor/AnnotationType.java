@@ -198,7 +198,7 @@ public class AnnotationType {
 	public void setUseHighlightColor(boolean use) {
 		if (isUseHighlightColor() != use) {
 			col = null; // force the create new coloring
-			putProp(PROP_USE_HIGHLIGHT_COLOR, new Boolean(use));
+			putProp(PROP_USE_HIGHLIGHT_COLOR, use);
 			firePropertyChange(PROP_USE_HIGHLIGHT_COLOR, null, null);
 			processChange();
 		}
@@ -247,7 +247,7 @@ public class AnnotationType {
 	public void setInheritForegroundColor(boolean inherit) {
 		if (isInheritForegroundColor() != inherit) {
 			col = null; // force the create new coloring
-			putProp(PROP_INHERIT_FOREGROUND_COLOR, new Boolean(inherit));
+			putProp(PROP_INHERIT_FOREGROUND_COLOR, inherit);
 			firePropertyChange(PROP_INHERIT_FOREGROUND_COLOR, null, null);
 			processChange();
 		}
@@ -400,7 +400,7 @@ public class AnnotationType {
 	 *            order of the annotation type combination
 	 */
 	public void setCombinationOrder(int order) {
-		putProp(PROP_COMBINATION_ORDER, new Integer(order));
+		putProp(PROP_COMBINATION_ORDER, order);
 	}
 
 	/**
@@ -418,7 +418,7 @@ public class AnnotationType {
 				ex.printStackTrace();
 			return;
 		}
-		putProp(PROP_COMBINATION_ORDER, new Integer(order));
+		putProp(PROP_COMBINATION_ORDER, order);
 	}
 
 	/**
@@ -434,7 +434,7 @@ public class AnnotationType {
 	}
 
 	public void setMinimumOptionals(int min) {
-		putProp(PROP_COMBINATION_MINIMUM_OPTIONALS, new Integer(min));
+		putProp(PROP_COMBINATION_MINIMUM_OPTIONALS, min);
 	}
 
 	public void setMinimumOptionals(String m) {
@@ -446,7 +446,7 @@ public class AnnotationType {
 				ex.printStackTrace();
 			return;
 		}
-		putProp(PROP_COMBINATION_MINIMUM_OPTIONALS, new Integer(min));
+		putProp(PROP_COMBINATION_MINIMUM_OPTIONALS, min);
 	}
 
 	/**
@@ -468,7 +468,7 @@ public class AnnotationType {
 	 *            visibility of the annotation type
 	 */
 	public void setVisible(boolean vis) {
-		putProp(PROP_VISIBLE, new Boolean(vis));
+		putProp(PROP_VISIBLE, vis);
 	}
 
 	/**
@@ -478,7 +478,7 @@ public class AnnotationType {
 	 *            visibility of the annotation type
 	 */
 	public void setVisible(String vis) {
-		putProp(PROP_VISIBLE, new Boolean(vis));
+		putProp(PROP_VISIBLE, vis);
 	}
 
 	/**
@@ -500,7 +500,7 @@ public class AnnotationType {
 	 *            whether the annotation type is whole line or not
 	 */
 	public void setWholeLine(boolean wl) {
-		putProp(PROP_WHOLE_LINE, new Boolean(wl));
+		putProp(PROP_WHOLE_LINE, wl);
 	}
 
 	/**
@@ -510,7 +510,7 @@ public class AnnotationType {
 	 *            whether the annotation type is whole line or not
 	 */
 	public void setWholeLine(String wl) {
-		putProp(PROP_WHOLE_LINE, new Boolean(wl));
+		putProp(PROP_WHOLE_LINE, wl);
 	}
 
 	/**

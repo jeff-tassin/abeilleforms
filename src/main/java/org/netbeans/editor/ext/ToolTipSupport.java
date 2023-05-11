@@ -397,7 +397,7 @@ public class ToolTipSupport extends MouseAdapter implements MouseMotionListener,
 		if (this.status != status) {
 			int oldStatus = this.status;
 			this.status = status;
-			firePropertyChange(PROP_STATUS, new Integer(oldStatus), new Integer(this.status));
+			firePropertyChange(PROP_STATUS, oldStatus, this.status);
 		}
 	}
 
@@ -543,7 +543,7 @@ public class ToolTipSupport extends MouseAdapter implements MouseMotionListener,
 			int oldDelay = enterTimer.getDelay();
 			enterTimer.setDelay(delay);
 
-			firePropertyChange(PROP_INITIAL_DELAY, new Integer(oldDelay), new Integer(enterTimer.getDelay()));
+			firePropertyChange(PROP_INITIAL_DELAY, oldDelay, new Integer(enterTimer.getDelay()));
 		}
 	}
 
@@ -564,7 +564,7 @@ public class ToolTipSupport extends MouseAdapter implements MouseMotionListener,
 			int oldDelay = exitTimer.getDelay();
 			exitTimer.setDelay(delay);
 
-			firePropertyChange(PROP_DISMISS_DELAY, new Integer(oldDelay), new Integer(exitTimer.getDelay()));
+			firePropertyChange(PROP_DISMISS_DELAY, oldDelay, new Integer(exitTimer.getDelay()));
 		}
 	}
 

@@ -54,9 +54,9 @@ public class TitledBorderLabelFactory extends JComponentBeanFactory {
 		super.defineProperties(props);
 
 		TransformOptionsProperty justprop = new TransformOptionsProperty("titleJustification", "getTitleJustification", "setTitleJustification",
-				new Object[][] { { "DEFAULT", new Integer(TitledBorder.DEFAULT_JUSTIFICATION) }, { "LEFT", new Integer(TitledBorder.LEFT) },
-						{ "CENTER", new Integer(TitledBorder.CENTER) }, { "RIGHT", new Integer(TitledBorder.RIGHT) },
-						{ "LEADING", new Integer(TitledBorder.LEADING) }, { "TRAILING", new Integer(TitledBorder.TRAILING) } });
+				new Object[][] { { "DEFAULT", TitledBorder.DEFAULT_JUSTIFICATION }, { "LEFT", TitledBorder.LEFT },
+						{ "CENTER", TitledBorder.CENTER }, { "RIGHT", TitledBorder.RIGHT },
+						{ "LEADING", TitledBorder.LEADING }, { "TRAILING", TitledBorder.TRAILING } });
 
 		justprop.setPreferred(true);
 		props.setPreferred("text", true);

@@ -780,7 +780,7 @@ public class EditorUI implements ChangeListener, PropertyChangeListener, Setting
 			JViewport vp = getParentViewport();
 			if (vp != null) {
 				java.lang.reflect.Method setScrollModeMethod = JViewport.class.getDeclaredMethod("setScrollMode", new Class[] { Integer.TYPE }); // NOI18N
-				setScrollModeMethod.invoke(vp, new Object[] { new Integer(0) });
+				setScrollModeMethod.invoke(vp, new Object[] { 0 });
 			}
 		} catch (Throwable t) {
 		}

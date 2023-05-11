@@ -264,7 +264,7 @@ public class SpecView extends JETAPanel implements GridViewListener, FormSpecDef
 
 	void setGroup(int groupNumber) {
 		JSpinner sp = m_spec_panel.getSpinner(SpecViewNames.ID_GROUP_NUMBER_SPINNER);
-		sp.setValue(new Integer(groupNumber));
+		sp.setValue(groupNumber);
 	}
 
 	/**

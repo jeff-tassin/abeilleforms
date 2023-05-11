@@ -35,19 +35,19 @@ public class NumericEditor extends JETAPropertyEditor {
 	/**
 	 * Panel that is used to hold our editor
 	 */
-	private JPanel m_panel;
+	private final JPanel m_panel;
 
 	/**
 	 * Text field that accepts only characters that are valid for floating point
 	 * values (i.e. digit, ., - )
 	 */
-	private JTextField m_field = new JTextField();
+	private final JTextField m_field = new JTextField();
 
 	/**
 	 * The type of value to expect (Integer.class, Long.class, Float.class,
 	 * Short.class, or Double.class )
 	 */
-	private Class m_number_class;
+	private final Class m_number_class;
 
 	/**
 	 * ctor
@@ -91,10 +91,10 @@ public class NumericEditor extends JETAPropertyEditor {
 			return value;
 		else if (value instanceof String) {
 			if (isIntegral()) {
-				return new Long(toLong((String) value));
+				return toLong((String) value);
 			}
 			else {
-				return new Double(toDouble((String) value));
+				return toDouble((String) value);
 			}
 		}
 		else
@@ -132,17 +132,17 @@ public class NumericEditor extends JETAPropertyEditor {
 	public Object getValue() {
 		String field_txt = FormDesignerUtils.fastTrim(m_field.getText());
 		if (isByte())
-			return new Byte((byte) toLong(field_txt));
+			return (byte) toLong(field_txt);
 		else if (isShort())
-			return new Short((short) toLong(field_txt));
+			return (short) toLong(field_txt);
 		else if (isInteger())
-			return new Integer((int) toLong(field_txt));
+			return (int) toLong(field_txt);
 		else if (isLong())
-			return new Long(toLong(field_txt));
+			return toLong(field_txt);
 		else if (isFloat())
-			return new Float((float) toDouble(field_txt));
+			return (float) toDouble(field_txt);
 		else if (isDouble())
-			return new Double(toDouble(field_txt));
+			return toDouble(field_txt);
 		else {
 			assert (false);
 			return null;

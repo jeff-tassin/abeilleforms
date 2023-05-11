@@ -195,7 +195,7 @@ public class Formatter implements SettingsChangeListener {
 	public void setShiftWidth(int shiftWidth) {
 		customShiftWidth = true;
 		if (this.shiftWidth == null || this.shiftWidth.intValue() != shiftWidth) {
-			this.shiftWidth = new Integer(shiftWidth);
+			this.shiftWidth = shiftWidth;
 		}
 	}
 

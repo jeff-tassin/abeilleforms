@@ -569,7 +569,7 @@ public class FindSupport {
 			}
 
 			MessageFormat fmt = new MessageFormat(LocaleSupport.getString(ITEMS_REPLACED_LOCALE));
-			String msg = fmt.format(new Object[] { new Integer(replacedCnt), new Integer(totalCnt) });
+			String msg = fmt.format(new Object[] { replacedCnt, totalCnt });
 			Utilities.setStatusText(c, msg);
 		}
 	}

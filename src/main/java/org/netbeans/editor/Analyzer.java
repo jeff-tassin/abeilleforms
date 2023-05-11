@@ -621,7 +621,7 @@ public class Analyzer {
 				}
 
 				// Set the line limit document property
-				doc.putProperty(BaseDocument.LINE_LIMIT_PROP, new Integer(lineLimit));
+				doc.putProperty(BaseDocument.LINE_LIMIT_PROP, lineLimit);
 
 				// Mark the inserted area is not yet covered by syntax
 				// state-infos

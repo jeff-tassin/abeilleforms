@@ -268,6 +268,7 @@ public class I18N {
 	 *         returned.
 	 * @deprecated
 	 */
+	@Deprecated
 	public static String getResource(String resourceName) {
 		return I18NHelper.getInstance().getLocalizedMessage(resourceName);
 	}

@@ -333,7 +333,7 @@ public class ExtSyntaxSupport extends SyntaxSupport {
 	}
 
 	public Map getLocalVariableMap(int offset) {
-		Integer posI = new Integer(offset);
+		Integer posI = offset;
 		Map varMap = (Map) localVarMaps.get(posI);
 		if (varMap == null) {
 			varMap = buildLocalVariableMap(offset);
@@ -357,7 +357,7 @@ public class ExtSyntaxSupport extends SyntaxSupport {
 	}
 
 	public Map getGlobalVariableMap(int offset) {
-		Integer posI = new Integer(offset);
+		Integer posI = offset;
 		Map varMap = (Map) globalVarMaps.get(posI);
 		if (varMap == null) {
 			varMap = buildGlobalVariableMap(offset);

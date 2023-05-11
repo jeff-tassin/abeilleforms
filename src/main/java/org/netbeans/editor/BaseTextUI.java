@@ -179,7 +179,7 @@ public class BaseTextUI extends TextUI implements ViewFactory, PropertyChangeLis
 				if (inputMapClass != null) {
 					java.lang.reflect.Method replaceUIInputMapMethod = SwingUtilities.class.getDeclaredMethod("replaceUIInputMap", new Class[] {
 							JComponent.class, Integer.TYPE, inputMapClass }); // NOI18N
-					replaceUIInputMapMethod.invoke(null, new Object[] { c, new Integer(JComponent.WHEN_FOCUSED), null });
+					replaceUIInputMapMethod.invoke(null, new Object[] { c, JComponent.WHEN_FOCUSED, null });
 				}
 			} catch (Throwable t) {
 			}

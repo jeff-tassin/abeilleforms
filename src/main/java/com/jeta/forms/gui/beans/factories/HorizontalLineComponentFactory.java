@@ -58,8 +58,8 @@ public class HorizontalLineComponentFactory extends JComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 
-		TransformOptionsProperty pprop = new TransformOptionsProperty("position", "getPosition", "setPosition", new Object[][] { { "CENTER", new Integer(0) },
-				{ "TOP", new Integer(1) }, { "BOTTOM", new Integer(2) } });
+		TransformOptionsProperty pprop = new TransformOptionsProperty("position", "getPosition", "setPosition", new Object[][] { { "CENTER", 0 },
+				{ "TOP", 1 }, { "BOTTOM", 2 } });
 		props.register(pprop);
 	}
 }

@@ -151,7 +151,7 @@ public class Registry {
 		}
 
 		docRefs[docRefsCount] = new WeakReference(doc);
-		doc.putProperty(BaseDocument.ID_PROP, new Integer(docRefsCount));
+		doc.putProperty(BaseDocument.ID_PROP, docRefsCount);
 		return docRefsCount++;
 	}
 
@@ -230,7 +230,7 @@ public class Registry {
 		}
 
 		if (ind == actSize) {
-			compAct.add(0, new Integer(compID));
+			compAct.add(0, compID);
 			activated = true;
 		}
 

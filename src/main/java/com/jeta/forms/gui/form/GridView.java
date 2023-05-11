@@ -181,11 +181,11 @@ public class GridView extends JETAPanel implements Paintable, FormAccessor, Grid
 	/**
 	 * The various layers in this view
 	 */
-	public static final Integer BACKGROUND_PAINTER_LAYER = new Integer(0);
-	public static final Integer CELL_PAINTER_LAYER = new Integer(1);
-	public static final Integer FORM_LAYER = new Integer(2);
-	public static final Integer OVERLAY_LAYER = new Integer(9);
-	public static final Integer FOCUS_LAYER = new Integer(10);
+	public static final Integer BACKGROUND_PAINTER_LAYER = 0;
+	public static final Integer CELL_PAINTER_LAYER = 1;
+	public static final Integer FORM_LAYER = 2;
+	public static final Integer OVERLAY_LAYER = 9;
+	public static final Integer FOCUS_LAYER = 10;
 
 	/**
 	 * Creates a <code>GridView</code> with no rows and columns

@@ -105,8 +105,8 @@ public class PanelWriter {
 				}
 				else if (cm instanceof BeanMemento) {
 					BeanMemento bm = (BeanMemento) cm;
-					Integer icol = new Integer(cc.gridX);
-					Integer irow = new Integer(cc.gridY);
+					Integer icol = cc.gridX;
+					Integer irow = cc.gridY;
 
 					if (bm.getBeanClass() == null) {
 						/** found an empty component */
@@ -201,7 +201,7 @@ public class PanelWriter {
 	private String createFillArray(HashMap indexes, int count) {
 		StringBuffer sbuff = null;
 		for (int index = 1; index <= count; index++) {
-			Integer ival = new Integer(index);
+			Integer ival = index;
 			FillMarker fm = (FillMarker) indexes.get(ival);
 			if (fm == null || fm.isFillable()) {
 				/** we have an empty row/column */

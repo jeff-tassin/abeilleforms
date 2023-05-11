@@ -93,7 +93,7 @@ public class LineBorderView extends AbstractBorderView {
 	 */
 	public void setLineThickness(int thickness) {
 		JSpinner sp = (JSpinner) getView().getComponentByName(LineBorderNames.ID_LINE_THICKNESS);
-		sp.setValue(new Integer(thickness));
+		sp.setValue(thickness);
 	}
 
 	/**
