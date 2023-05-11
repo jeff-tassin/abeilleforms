@@ -57,8 +57,8 @@ public class TextFieldBeanFactory extends TextComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty prop = new TransformOptionsProperty("horizontalAlignment", "getHorizontalAlignment", "setHorizontalAlignment", new Object[][] {
-				{ "LEFT", new Integer(JTextField.LEFT) }, { "CENTER", new Integer(JTextField.CENTER) }, { "RIGHT", new Integer(JTextField.RIGHT) },
-				{ "LEADING", new Integer(JTextField.LEADING) }, { "TRAILING", new Integer(JTextField.TRAILING) } });
+				{ "LEFT", JTextField.LEFT }, { "CENTER", JTextField.CENTER }, { "RIGHT", JTextField.RIGHT },
+				{ "LEADING", JTextField.LEADING }, { "TRAILING", JTextField.TRAILING } });
 
 		props.register(prop);
 	}

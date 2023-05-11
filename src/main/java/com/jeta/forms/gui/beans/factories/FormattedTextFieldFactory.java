@@ -50,8 +50,8 @@ public class FormattedTextFieldFactory extends TextFieldBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty prop = new TransformOptionsProperty("focusLostBehavior", "getFocusLostBehavior", "setFocusLostBehavior", new Object[][] {
-				{ "COMMIT_OR_REVERT", new Integer(JFormattedTextField.COMMIT_OR_REVERT) }, { "REVERT", new Integer(JFormattedTextField.REVERT) },
-				{ "COMMIT", new Integer(JFormattedTextField.COMMIT) }, { "PERSIST", new Integer(JFormattedTextField.PERSIST) } });
+				{ "COMMIT_OR_REVERT", JFormattedTextField.COMMIT_OR_REVERT }, { "REVERT", JFormattedTextField.REVERT },
+				{ "COMMIT", JFormattedTextField.COMMIT }, { "PERSIST", JFormattedTextField.PERSIST } });
 
 		props.register(prop);
 	}

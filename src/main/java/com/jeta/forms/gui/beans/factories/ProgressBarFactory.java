@@ -54,7 +54,7 @@ public class ProgressBarFactory extends JComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty oprop = new TransformOptionsProperty("orientation", "getOrientation", "setOrientation", new Object[][] {
-				{ "HORIZONTAL", new Integer(JProgressBar.HORIZONTAL) }, { "VERTICAL", new Integer(JProgressBar.VERTICAL) } });
+				{ "HORIZONTAL", JProgressBar.HORIZONTAL }, { "VERTICAL", JProgressBar.VERTICAL } });
 		props.register(oprop);
 
 		props.removeProperty("string");

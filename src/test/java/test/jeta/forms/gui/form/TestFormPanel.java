@@ -1,11 +1,11 @@
 package test.jeta.forms.gui.form;
 
 import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
 import com.jeta.forms.components.panel.FormPanel;
-import com.sun.glass.events.WindowEvent;
 
 
 public class TestFormPanel {

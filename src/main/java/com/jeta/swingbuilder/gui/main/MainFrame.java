@@ -266,7 +266,7 @@ public class MainFrame extends JFrame implements ComponentSource, GridViewListen
 			if (icon != null)
 				setIconImage(icon.getImage());
 
-			createLookAndFeelMenu();
+			// createLookAndFeelMenu();
 
 			updateComponents();
 		} catch (Exception e) {
@@ -387,8 +387,7 @@ public class MainFrame extends JFrame implements ComponentSource, GridViewListen
 		return m_properties_view;
 	}
 
-	/**
-	 * Creates the look and feel submenu.
+	/**	 * Creates the look and feel submenu.
 	 */
 	private JMenu createLookAndFeelMenu() {
 		m_lfmenu.removeAll();
@@ -591,9 +590,11 @@ public class MainFrame extends JFrame implements ComponentSource, GridViewListen
 		menu.add(i18n_createMenuItem("Export Names", FormEditorNames.ID_EXPORT_COMPONENT_NAMES, null));
 		menuBar.add(menu);
 
+		/*
 		m_lfmenu = new JMenu(I18N.getLocalizedMessage("Look and Feel"));
 		m_lfmenu.setName("Look and Feel Menu");
 		menuBar.add(m_lfmenu);
+		 */
 
 		menu = new JMenu(I18N.getLocalizedMessage("Tools"));
 		menu.add(i18n_createMenuItem("Form Properties", MainFrameNames.ID_FORM_PROPERTIES, KeyStroke.getKeyStroke(KeyEvent.VK_F4, 0, false)));

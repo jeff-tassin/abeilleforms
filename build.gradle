@@ -2,8 +2,8 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.17
+targetCompatibility = 1.17
 
 repositories {
     mavenCentral()
@@ -12,19 +12,19 @@ repositories {
 
 // The shortcut form for declaring external dependencies looks like “group:name:version”.
 dependencies {
-    compile 'junit:junit:4.12', 'org.json:json:20151123', files('thirdparty/dt.jar','thirdparty/batik-awt-util.jar')
+    implementation 'junit:junit:4.12', 'org.json:json:20151123', files('thirdparty/dt.jar','thirdparty/batik-awt-util.jar')
 }
 
 
 task designer(type: Jar, dependsOn: build) {
     manifest {
-        attributes 'Application': 'Abeille Forms Jar',  
+        attributes 'Application': 'Abeille Forms',
         	'Implementation-Version': 1.0,
         	'Main-Class': 'com.jeta.swingbuilder.main.Launcher'
     }
-    baseName = project.name 
+	archiveBaseName = project.name
     from { 
-    	configurations.compile.collect { 
+    	configurations.runtimeClasspath.collect {
     		it.isDirectory() ? it : zipTree(it) 
     	} 
     }
@@ -33,7 +33,7 @@ task designer(type: Jar, dependsOn: build) {
 
 task deploy(type: Jar, dependsOn: designer ) {
     description 'runtime task'
-	archiveName = 'formsrt.jar'
+	archiveFileName = 'formsrt.jar'
 	from zipTree( 'build/libs/' + project.name + '.jar' ).matching {
     		include { it.path.startsWith('com/jgoodies') }
     		include { it.path.startsWith('com/jeta/forms') }

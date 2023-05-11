@@ -54,7 +54,7 @@ public class SliderFactory extends JComponentBeanFactory {
 	public void defineProperties(BeanProperties props) {
 		super.defineProperties(props);
 		TransformOptionsProperty oprop = new TransformOptionsProperty("orientation", "getOrientation", "setOrientation", new Object[][] {
-				{ "HORIZONTAL", new Integer(JSlider.HORIZONTAL) }, { "VERTICAL", new Integer(JSlider.VERTICAL) } });
+				{ "HORIZONTAL", JSlider.HORIZONTAL }, { "VERTICAL", JSlider.VERTICAL } });
 
 		props.register(oprop);
 	}
