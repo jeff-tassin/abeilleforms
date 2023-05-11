@@ -830,6 +830,7 @@ public class Analyzer {
 	 * 
 	 * @deprecated
 	 */
+	@Deprecated
 	public static char[] createWhiteSpaceFillBuffer(int startCol, int endCol, int tabSize) {
 		return createWhitespaceFillBuffer(startCol, endCol, tabSize);
 	}

@@ -666,9 +666,9 @@ public class FormEditor extends JETAPanel implements GridViewListener {
 			GridView view = gc.getParentView();
 			if (view != null) {
 				ColumnSpec cspec = view.getColumnSpec(gc.getColumn());
-				m_colcell.setText(I18N.format("column_spec_2", new Integer(gc.getColumn()), cspec.toString()));
+				m_colcell.setText(I18N.format("column_spec_2", gc.getColumn(), cspec.toString()));
 				RowSpec rspec = view.getRowSpec(gc.getRow());
-				m_rowcell.setText(I18N.format("row_spec_2", new Integer(gc.getRow()), rspec.toString()));
+				m_rowcell.setText(I18N.format("row_spec_2", gc.getRow(), rspec.toString()));
 
 			}
 

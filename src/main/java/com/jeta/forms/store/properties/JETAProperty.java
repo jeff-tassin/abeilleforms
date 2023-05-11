@@ -81,6 +81,7 @@ public abstract class JETAProperty extends AbstractJETAPersistable {
 	 * 
 	 * @deprecated no longer required.
 	 */
+	@Deprecated
 	private Class m_type;
 
 	/**

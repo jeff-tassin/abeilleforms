@@ -9,6 +9,7 @@ import com.jeta.forms.store.jml.dom.JMLNode;
  * @deprecated Use PrimitiveSerializer instead.
  * @author Jeff Tassin
  */
+@Deprecated
 public class PrimitiveHolderSerializer implements JMLSerializer {
 
 	public JMLNode serialize(JMLDocument document, Object obj) throws JMLException {

@@ -59,12 +59,16 @@ public class JavaSettingsDefaults extends ExtSettingsDefaults {
 	public static final Boolean defaultJavaFormatLeadingStarInComment = Boolean.TRUE;
 
 	/** @deprecated */
+	@Deprecated
 	public static final Boolean defaultFormatSpaceBeforeParenthesis = defaultJavaFormatSpaceBeforeParenthesis;
 	/** @deprecated */
+	@Deprecated
 	public static final Boolean defaultFormatSpaceAfterComma = defaultJavaFormatSpaceAfterComma;
 	/** @deprecated */
+	@Deprecated
 	public static final Boolean defaultFormatNewlineBeforeBrace = defaultJavaFormatNewlineBeforeBrace;
 	/** @deprecated */
+	@Deprecated
 	public static final Boolean defaultFormatLeadingSpaceInComment = defaultJavaFormatLeadingSpaceInComment;
 
 	public static final Acceptor defaultIndentHotCharsAcceptor = new Acceptor() {

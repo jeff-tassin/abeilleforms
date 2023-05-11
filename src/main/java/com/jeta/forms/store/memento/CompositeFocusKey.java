@@ -47,6 +47,7 @@ import com.jeta.forms.store.JETAObjectOutput;
  * 
  * @author Jeff Tassin
  */
+@Deprecated
 public class CompositeFocusKey extends AbstractJETAPersistable implements FocusKey, Cloneable, Externalizable {
 	static final long serialVersionUID = -8573867529435047276L;
 

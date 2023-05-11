@@ -99,6 +99,7 @@ public abstract class JETAController {
 	 * 
 	 * @deprecated
 	 */
+	@Deprecated
 	private ListenerManager m_action_listeners = new ListenerManager();
 
 	/**
@@ -421,6 +422,7 @@ public abstract class JETAController {
 	 *         validation succeeded
 	 * @deprecated overrideValidateInputs instead
 	 */
+	@Deprecated
 	private final String validate() {
 		return null;
 	}

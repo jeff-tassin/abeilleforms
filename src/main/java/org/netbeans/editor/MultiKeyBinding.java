@@ -238,7 +238,7 @@ public class MultiKeyBinding extends JTextComponent.KeyBinding implements java.i
 			}
 		}
 		else {
-			out.writeObject(new Integer(-1));
+			out.writeObject(-1);
 		}
 
 		if (key != null) {

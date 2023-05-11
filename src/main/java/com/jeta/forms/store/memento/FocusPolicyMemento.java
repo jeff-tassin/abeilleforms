@@ -45,6 +45,7 @@ import com.jeta.open.support.EmptyCollection;
  * 
  * @author Jeff Tassin
  */
+@Deprecated
 public class FocusPolicyMemento extends AbstractJETAPersistable {
 	static final long serialVersionUID = -6821089968630851097L;
 

@@ -15,7 +15,7 @@ public class PrimitiveHandler extends ObjectHandler {
 			return Byte.valueOf(value);
 		}
 		else if ("Character".equalsIgnoreCase(className) || ("java.lang.Character").equalsIgnoreCase(className)) {
-			return new Character(value.charAt(0));
+			return value.charAt(0);
 		}
 		else if ("Short".equalsIgnoreCase(className) || ("java.lang.Short").equalsIgnoreCase(className)) {
 			return Short.valueOf(value);

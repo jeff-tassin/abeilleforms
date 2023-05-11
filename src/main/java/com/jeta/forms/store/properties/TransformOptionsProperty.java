@@ -109,7 +109,7 @@ public class TransformOptionsProperty extends JETAProperty implements TransformP
 	 *            the name of the property associated with this transform.
 	 * @param getMethod
 	 *            the name of the bean method to get the property value
-	 * @param setMethdo
+	 * @param setMethod
 	 *            the name of the bean method to set the property value
 	 * @param options
 	 *            an Nx2 array of options for this transform. The first column
@@ -268,7 +268,7 @@ public class TransformOptionsProperty extends JETAProperty implements TransformP
 				ival = (Integer) option;
 			}
 			else if (option instanceof TransformOptionsProperty) {
-				ival = new Integer(((TransformOptionsProperty) option).getPropertyValue());
+				ival = ((TransformOptionsProperty) option).getPropertyValue();
 			}
 
 			if (ival != null) {

@@ -252,7 +252,7 @@ public class DefaultBeanSerializer implements BeanSerializer {
 										 * special handling for transforms.
 										 * store the actual value instead
 										 */
-										ppm.addProperty(jpd.getName(), new Integer(((TransformOptionsProperty) prop_value).getPropertyValue()));
+										ppm.addProperty(jpd.getName(), ((TransformOptionsProperty) prop_value).getPropertyValue());
 									}
 									else {
 										ppm.addProperty(jpd.getName(), (Serializable) prop_value);

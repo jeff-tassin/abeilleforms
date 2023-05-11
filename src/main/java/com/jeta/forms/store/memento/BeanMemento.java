@@ -76,6 +76,7 @@ public class BeanMemento extends ComponentMemento {
 	 * @deprecated only supported in version 1 of this class. Replaced by
 	 *             <code>m_properties</code>
 	 */
+	@Deprecated
 	private byte[] m_bean_xml;
 
 	/**
@@ -85,6 +86,7 @@ public class BeanMemento extends ComponentMemento {
 	 * @deprecated only supported in version 1 of this class. Replaced by
 	 *             <code>m_properties</code>
 	 */
+	@Deprecated
 	private Collection m_custom_properties;
 
 	/**
@@ -109,6 +111,7 @@ public class BeanMemento extends ComponentMemento {
 	 *         associated with the bean.
 	 * @deprecated only suupported in version 1 of this class.
 	 */
+	@Deprecated
 	public Collection getCustomProperties() {
 		return m_custom_properties;
 	}
@@ -133,6 +136,7 @@ public class BeanMemento extends ComponentMemento {
 	/**
 	 * @deprecated Use <code>getProperties</code> instead.
 	 */
+	@Deprecated
 	public byte[] getBeanXML() {
 		return m_bean_xml;
 	}
@@ -162,6 +166,7 @@ public class BeanMemento extends ComponentMemento {
 	 * @param props
 	 *            a collection of JETAProperty objects
 	 */
+	@Deprecated
 	public void setCustomProperties(Collection props) {
 		m_custom_properties = props;
 	}
@@ -184,6 +189,7 @@ public class BeanMemento extends ComponentMemento {
 	/**
 	 * @deprecated Use <code>setProperties</code> instead.
 	 */
+	@Deprecated
 	public void setBeanXML(byte[] xml) {
 		m_bean_xml = xml;
 	}

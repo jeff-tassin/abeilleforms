@@ -111,7 +111,7 @@ public class SettingsDefaults {
 	public static final Integer defaultMarkDistance = 100;
 	public static final Integer defaultMaxMarkDistance = 150;
 	public static final Integer defaultMinMarkDistance = 50;
-	public static final Integer defaultSyntaxUpdateBatchSize = new Integer(defaultMarkDistance.intValue() * 7);
+	public static final Integer defaultSyntaxUpdateBatchSize = defaultMarkDistance.intValue() * 7;
 	public static final Integer defaultLineBatchSize = 2;
 
 	public static final Boolean defaultExpandTabs = Boolean.TRUE;

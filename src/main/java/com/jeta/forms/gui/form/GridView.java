@@ -496,6 +496,7 @@ public class GridView extends JETAPanel implements Paintable, FormAccessor, Grid
 	 * 
 	 * @deprecated
 	 */
+	@Deprecated
 	public Container getFormContainer() {
 		return m_form;
 	}
@@ -1651,7 +1652,7 @@ public class GridView extends JETAPanel implements Paintable, FormAccessor, Grid
 			for (int gindex = 0; gindex < groups.length; gindex++) {
 				int[] cols = groups[gindex];
 				if (cols != null) {
-					Integer ckey = new Integer(gindex + 1);
+					Integer ckey = gindex + 1;
 					for (int cindex = 0; cindex < cols.length; cindex++) {
 						gset.assignToGroup(ckey, cols[cindex]);
 					}
@@ -1675,7 +1676,7 @@ public class GridView extends JETAPanel implements Paintable, FormAccessor, Grid
 			for (int gindex = 0; gindex < groups.length; gindex++) {
 				int[] rows = groups[gindex];
 				if (rows != null) {
-					Integer rkey = new Integer(gindex + 1);
+					Integer rkey = gindex + 1;
 					for (int rindex = 0; rindex < rows.length; rindex++) {
 						gset.assignToGroup(rkey, rows[rindex]);
 					}

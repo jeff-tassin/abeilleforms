@@ -496,7 +496,7 @@ public class GlyphGutter extends JComponent implements Annotations.AnnotationsLi
 			return null;
 		if (isMouseOverCycleButton(e) && annos.getNumberOfAnnotations(line) > 1) {
 			return java.text.MessageFormat.format(LocaleSupport.getString("cycling-glyph_tooltip"), // NOI18N
-					new Object[] { new Integer(annos.getNumberOfAnnotations(line)) });
+					new Object[] { annos.getNumberOfAnnotations(line) });
 		}
 		else if (isMouseOverGlyph(e)) {
 			return annos.getActiveAnnotation(line).getShortDescription();

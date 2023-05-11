@@ -140,6 +140,7 @@ public class FormMemento extends ComponentMemento {
 	 * @deprecated As of version 5 of this class. PropertiesMemento is used
 	 *             instead.
 	 */
+	@Deprecated
 	private HashMap m_properties = new HashMap();
 
 	/**
@@ -189,6 +190,7 @@ public class FormMemento extends ComponentMemento {
 	 * @return the focus policy for this form
 	 * @deprecated no longer supporting focus in the designer.
 	 */
+	@Deprecated
 	public FocusPolicyMemento getFocusPolicy() {
 		return m_focus_policy;
 	}
@@ -218,6 +220,7 @@ public class FormMemento extends ComponentMemento {
 	 * @deprecated replaced by getPropertiesMemento. see
 	 *             #getPropertiesMemento().
 	 */
+	@Deprecated
 	public HashMap getProperties() {
 		return m_properties;
 	}
@@ -290,8 +293,7 @@ public class FormMemento extends ComponentMemento {
 	/**
 	 * Set the column groups for the form
 	 * 
-	 * @param colgrps
-	 *            the column groups
+	 * @param colgrps the column groups
 	 * @see com.jgoodies.forms.layout.FormLayout#setColumnGroups(int[][])
 	 */
 	public void setColumnGroups(FormGroupSet colgrps) {
@@ -311,10 +313,10 @@ public class FormMemento extends ComponentMemento {
 	/**
 	 * Sets the focus policy for this form
 	 * 
-	 * @param memento
-	 *            the focus policy state
+	 * @param memento  the focus policy state
 	 * @deprecated focus is no longer supported in the designer.
 	 */
+	@Deprecated
 	public void setFocusPolicy(FocusPolicyMemento memento) {
 		m_focus_policy = memento;
 	}
@@ -358,6 +360,7 @@ public class FormMemento extends ComponentMemento {
 	 * @deprecated As of version 5 of this class.
 	 * @see #setPropertiesMemento(PropertiesMemento)
 	 */
+	@Deprecated
 	public void setProperties(HashMap props) {
 		m_properties = props;
 	}

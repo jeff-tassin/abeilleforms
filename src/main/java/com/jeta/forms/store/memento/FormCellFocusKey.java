@@ -47,6 +47,7 @@ import com.jeta.forms.store.JETAObjectOutput;
  * 
  * @author Jeff Tassin
  */
+@Deprecated
 public class FormCellFocusKey extends AbstractJETAPersistable implements FocusKey {
 	static final long serialVersionUID = -4924710096594920379L;
 
@@ -72,9 +73,6 @@ public class FormCellFocusKey extends AbstractJETAPersistable implements FocusKe
 
 	/**
 	 * ctor
-	 * 
-	 * @param path
-	 *            the path to this key
 	 */
 	public FormCellFocusKey(int row, int col, Component comp) {
 		m_row = row;

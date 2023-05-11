@@ -95,7 +95,7 @@ public class ShadowBorderView extends AbstractBorderView {
 			setColorProperty(ShadowBorderNames.ID_START_COLOR, sp.getStartColor());
 			setColorProperty(ShadowBorderNames.ID_END_COLOR, sp.getEndColor());
 			SpinnerNumberModel model = (SpinnerNumberModel) getSpinner(ShadowBorderNames.ID_THICKNESS_SPINNER).getModel();
-			model.setValue(new Integer(sp.getThickness()));
+			model.setValue(sp.getThickness());
 			setSelected(ShadowBorderNames.ID_SOLID_RADIO, (sp.getType() == ShadowBorderProperty.SOLID));
 			setSelected(ShadowBorderNames.ID_GRADIENT_RADIO, (sp.getType() == ShadowBorderProperty.GRADIENT));
 			setSelected(ShadowBorderNames.ID_SYMMETRIC, sp.isSymmetric());

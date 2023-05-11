@@ -117,6 +117,7 @@ public class Mark {
 	 * 
 	 * @deprecated
 	 */
+	@Deprecated
 	public final boolean getInsertAfter() {
 		return backwardBias;
 	}
@@ -213,6 +214,7 @@ public class Mark {
 	 * 
 	 * @deprecated It will not be supported in the future.
 	 */
+	@Deprecated
 	protected void removeUpdateAction(int pos, int len) {
 	}
 

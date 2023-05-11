@@ -1385,6 +1385,7 @@ public class EditorUI implements ChangeListener, PropertyChangeListener, Setting
 	 *            policy to be used when scrolling.
 	 * @deprecated
 	 */
+	@Deprecated
 	public void caretSetDot(int offset, Rectangle scrollRect, int scrollPolicy) {
 		if (component != null) {
 			Caret caret = component.getCaret();
@@ -1409,6 +1410,7 @@ public class EditorUI implements ChangeListener, PropertyChangeListener, Setting
 	 *            policy to be used when scrolling.
 	 * @deprecated
 	 */
+	@Deprecated
 	public void caretMoveDot(int offset, Rectangle scrollRect, int scrollPolicy) {
 		if (component != null) {
 			Caret caret = component.getCaret();

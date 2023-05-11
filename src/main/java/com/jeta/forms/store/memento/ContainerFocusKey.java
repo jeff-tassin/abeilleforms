@@ -45,6 +45,7 @@ import com.jeta.forms.store.JETAObjectOutput;
  * 
  * @author Jeff Tassin
  */
+@Deprecated
 public class ContainerFocusKey extends AbstractJETAPersistable implements FocusKey, Externalizable {
 	static final long serialVersionUID = 2805759792148388234L;
 

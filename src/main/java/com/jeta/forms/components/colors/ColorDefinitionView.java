@@ -204,8 +204,8 @@ public class ColorDefinitionView extends JETAPanel {
 			setSelectedColor(color_name);
 			ColorSelectorUtils.setColor(m_color_well, cprop.getColor());
 
-			m_factor_spinner.setValue(new Double(cprop.getBrightnessFactor()));
-			m_bright_spinner.setValue(new Integer(cprop.getBrightness()));
+			m_factor_spinner.setValue(cprop.getBrightnessFactor());
+			m_bright_spinner.setValue(cprop.getBrightness());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -330,7 +330,7 @@ public class ColorDefinitionView extends JETAPanel {
 
 				bg.dispose();
 				icon = new ImageIcon(bimage);
-				m_color_icons.put(new Integer(m_color.getRGB()), icon);
+				m_color_icons.put(m_color.getRGB(), icon);
 			}
 			return icon;
 		}

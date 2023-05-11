@@ -126,6 +126,7 @@ public class FormComponent extends GridComponent {
 	 * 
 	 * @deprecated The designer is no longer supporting focus.
 	 */
+	@Deprecated
 	private FocusPolicyMemento m_focus_policy;
 
 	/**
@@ -290,6 +291,7 @@ public class FormComponent extends GridComponent {
 	 * @return the focus policy for this form (not currently used)
 	 * @deprecated the designer no longer supports focus policy.
 	 */
+	@Deprecated
 	public FocusPolicyMemento getFocusPolicy() {
 		return m_focus_policy;
 	}
@@ -681,6 +683,7 @@ public class FormComponent extends GridComponent {
 	 * 
 	 * @deprecated The designer no longer supports focus.
 	 */
+	@Deprecated
 	public void setFocusPolicy(FocusPolicyMemento fm) {
 		m_focus_policy = fm;
 	}

@@ -39,6 +39,7 @@ import java.awt.Container;
  * 
  * @author Jeff Tassin
  */
+@Deprecated
 public interface FocusKey {
 	public Component getComponent(Container parent);
 

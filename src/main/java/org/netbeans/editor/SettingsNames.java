@@ -410,6 +410,7 @@ public class SettingsNames {
 	 * 
 	 * @deprecated As of 05/09/2001
 	 */
+	@Deprecated
 	public static final String HOME_KEY_COLUMN_ONE = "home-key-column-one"; // NOI18N
 
 	/**

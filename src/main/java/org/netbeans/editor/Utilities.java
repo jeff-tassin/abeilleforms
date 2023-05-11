@@ -788,6 +788,7 @@ public class Utilities {
 	 * @deprecated
 	 * @see Formatter.insertTabString()
 	 */
+	@Deprecated
 	public static String getTabInsertString(BaseDocument doc, int offset) throws BadLocationException {
 		int col = getVisualColumn(doc, offset);
 		Formatter f = doc.getFormatter();

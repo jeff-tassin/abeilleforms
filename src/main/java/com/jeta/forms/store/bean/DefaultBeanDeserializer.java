@@ -248,7 +248,7 @@ public class DefaultBeanDeserializer implements BeanDeserializer {
 			else if (c == Byte.class || c == byte.class)
 				return Byte.valueOf(sval);
 			else if (c == Character.class || c == char.class)
-				return new Character(sval.length() == 0 ? '\0' : sval.charAt(0));
+				return sval.length() == 0 ? '\0' : sval.charAt(0);
 			else if (c == Short.class || c == short.class)
 				return Short.valueOf(sval);
 			else if (c == Integer.class || c == int.class)
